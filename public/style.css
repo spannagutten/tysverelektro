@@ -60,6 +60,10 @@ header {
 
     z-index: 1000;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     transition:
         padding 0.25s ease,
         box-shadow 0.25s ease;
@@ -99,7 +103,7 @@ nav {
     display: flex;
     gap: 30px;
 
-    margin-top: 20px;
+    margin-top: 0;
 
     flex-wrap: wrap;
 
@@ -136,11 +140,6 @@ header.scrolled {
     padding-top: 8px;
     padding-bottom: 8px;
 
-    display: flex;
-    align-items: center;
-
-    gap: 40px;
-
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
@@ -148,11 +147,6 @@ header.scrolled img {
     width: 140px;
     margin-bottom: 0;
 }
-
-header.scrolled nav {
-    margin-top: 0;
-}
-
 
 /* ------------------------------
    HOVEDINNHOLD
