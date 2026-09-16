@@ -12,17 +12,21 @@
 
 <body>
 
-    <header>
+    <div class="header-space">
 
-    <img src="images/te_logo_removebg.png" alt="Tysvær Elektro logo">
+        <header>
 
-    <nav>
-        <a href="/">Hjem</a>
-        <a href="/tjenester/">Våre tjenester</a>
-        <a href="/kontakt/">Kontakt oss</a>
-    </nav>
+            <img src="images/te_logo_removebg.png" alt="Tysvær Elektro logo">
 
-    </header>  
+            <nav>
+                <a href="/">Hjem</a>
+                <a href="/tjenester/">Våre tjenester</a>
+                <a href="/kontakt/">Kontakt oss</a>
+            </nav>
+
+        </header>
+
+    </div>
 
 
     <main>
@@ -97,6 +101,21 @@
         </p>
 
     </footer>
+
+
+    <script>
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", function () {
+
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+
+        });
+    </script>
 
 </body>
 
