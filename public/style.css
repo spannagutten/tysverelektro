@@ -37,12 +37,6 @@ p {
    PLASS TIL HEADER
 ------------------------------ */
 
-/*
-   Denne beholder samme høyde hele tiden.
-   Dermed flytter ikke nettsiden seg når
-   selve headeren krymper.
-*/
-
 .header-space {
     height: 155px;
     flex-shrink: 0;
@@ -55,8 +49,6 @@ p {
 
 header {
     background-color: #343434;
-    color: #202020;
-
     padding: 20px 8%;
 
     border-bottom: 1px solid #E0DAD5;
@@ -89,12 +81,22 @@ header img {
 
 
 /* ------------------------------
-   NAVIGASJON / FANER
+   MENYKNAPP
+------------------------------ */
+
+/* Skjult på PC */
+
+.menu-button {
+    display: none;
+}
+
+
+/* ------------------------------
+   NAVIGASJON
 ------------------------------ */
 
 nav {
     display: flex;
-
     gap: 30px;
 
     margin-top: 20px;
@@ -127,7 +129,7 @@ nav a:hover {
 
 
 /* ------------------------------
-   HEADER VED SCROLL
+   HEADER VED SCROLL - PC
 ------------------------------ */
 
 header.scrolled {
@@ -169,7 +171,7 @@ main {
 
 
 /* ------------------------------
-   HERO / TOPP
+   HERO
 ------------------------------ */
 
 .hero {
@@ -177,7 +179,6 @@ main {
     color: white;
 
     padding: 100px 8%;
-
     min-height: 500px;
 
     display: flex;
@@ -275,7 +276,6 @@ footer {
 
 footer p {
     margin: 0;
-
     color: #d5d5d5;
 }
 
@@ -286,45 +286,113 @@ footer p {
 
 @media (max-width: 700px) {
 
+    /*
+       Mobilheaderen har fast og kompakt høyde.
+    */
+
     .header-space {
-        height: 140px;
+        height: 80px;
     }
 
-    header {
-        padding: 18px 25px;
+    header,
+    header.scrolled {
+        height: 80px;
+
+        padding: 10px 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 0;
     }
 
-    header img {
-        width: 180px;
+
+    /* Logo */
+
+    header img,
+    header.scrolled img {
+        width: 135px;
+
+        margin: 0;
     }
 
-    nav {
-        gap: 18px;
-        margin-top: 15px;
+
+    /* Menyknapp */
+
+    .menu-button {
+        display: block;
+
+        background: none;
+        border: none;
+
+        color: #FFFFFF;
+
+        font-size: 30px;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        padding: 8px;
     }
+
+
+    /* Menyen er skjult som standard */
+
+    nav,
+    header.scrolled nav {
+        display: none;
+
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        background-color: #343434;
+
+        border-top: 1px solid #4A4A4A;
+
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* Vises når menyknappen trykkes */
+
+    nav.open {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+    }
+
 
     nav a {
-        font-size: 14px;
+        width: 100%;
+
+        padding: 16px 20px;
+
+        font-size: 16px;
+
+        border-bottom: 1px solid #4A4A4A;
     }
 
-    header.scrolled {
-        padding: 8px 25px;
+    nav a:hover {
+        border-bottom: 1px solid #4A4A4A;
 
-        gap: 20px;
+        background-color: #404040;
     }
 
-    header.scrolled img {
-        width: 110px;
-    }
 
-    header.scrolled nav {
-        margin-top: 0;
-        gap: 12px;
-    }
+    /* Innhold */
 
     .hero {
         padding: 70px 25px;
-
         min-height: 400px;
     }
 
@@ -347,4 +415,5 @@ footer p {
     .section h2 {
         font-size: 28px;
     }
+
 }

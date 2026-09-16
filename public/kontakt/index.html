@@ -18,6 +18,10 @@
 
             <img src="../images/te_logo_removebg.png" alt="Tysvær Elektro logo">
 
+            <button class="menu-button" aria-label="Åpne meny" aria-expanded="false">
+                ☰
+            </button>
+
             <nav>
                 <a href="/">Hjem</a>
                 <a href="/tjenester/">Våre tjenester</a>
@@ -73,14 +77,31 @@
 
     <script>
         const header = document.querySelector("header");
+        const menuButton = document.querySelector(".menu-button");
+        const nav = document.querySelector("nav");
 
         window.addEventListener("scroll", function () {
 
-            if (window.scrollY > 50) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
+            if (window.innerWidth > 700) {
+
+                if (window.scrollY > 50) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+
             }
+
+        });
+
+        menuButton.addEventListener("click", function () {
+
+            nav.classList.toggle("open");
+
+            const menuIsOpen = nav.classList.contains("open");
+
+            menuButton.textContent = menuIsOpen ? "✕" : "☰";
+            menuButton.setAttribute("aria-expanded", menuIsOpen);
 
         });
     </script>
