@@ -528,22 +528,7 @@ footer a:hover {
 }
 
 
-@media (max-width: 700px) {
-    footer .footer-content {
-        justify-items: center;
-    }
 
-    footer .social-links,
-    footer .footer-badges {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-
-    footer .footer-info {
-        text-align: center;
-    }
-}
 
 
 
@@ -621,19 +606,7 @@ footer .social-links {
     object-fit: contain;
 }
 
-@media (max-width: 700px) {
-    .footer-content {
-        grid-template-columns: minmax(0, 1fr);
-    }
 
-    .footer-info {
-        text-align: left;
-    }
-
-    .footer-badges {
-        justify-content: flex-start;
-    }
-}
 /* Lys bakgrunn holder de svarte og fargede merkene lesbare. */
 .footer-badges img {
     width: 104px;
@@ -643,4 +616,22 @@ footer .social-links {
     padding: 8px;
     background-color: #fff;
     border-radius: 4px;
+}
+/* Mobilreglene står etter footer-stilene slik at de får prioritet. */
+@media (max-width: 700px) {
+    footer .footer-content {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+    }
+
+    footer .social-links,
+    footer .footer-badges {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer .footer-info {
+        text-align: center;
+    }
 }
