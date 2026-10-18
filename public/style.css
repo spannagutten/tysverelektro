@@ -635,3 +635,29 @@ footer .social-links {
         text-align: center;
     }
 }
+/* Ringeknapp på forsiden for mobil. */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-actions .mobile-call-button {
+    display: none;
+}
+
+.mobile-call-button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+    .hero-actions .mobile-call-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+    }
+}
