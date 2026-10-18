@@ -757,3 +757,63 @@ footer .social-links {
         grid-template-columns: minmax(0, 1fr);
     }
 }
+/* Forsiden: tjenester og oppdragstyper med SVG-ikoner. */
+.expertise-group {
+    margin: 32px 0 40px;
+}
+
+.section .expertise-group h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #454545;
+    margin-bottom: 18px;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expertise-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-width: 0;
+    min-height: 140px;
+    padding: 22px 8px;
+    background: #F5F3F0;
+    border: 1px solid #d8d0c9;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.expertise-item svg {
+    color: #CB322C;
+    flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+    .expertise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .expertise-item {
+        min-height: 120px;
+        padding: 18px 8px;
+    }
+
+    .expertise-item:last-child {
+        grid-column: 1 / -1;
+        width: calc((100% - 12px) / 2);
+        justify-self: center;
+    }
+}
