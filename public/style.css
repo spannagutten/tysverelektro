@@ -526,6 +526,23 @@ footer a:hover {
     }
 
 }
+
+
+@media (max-width: 700px) {
+    footer .social-links,
+    footer .footer-badges {
+        justify-content: center;
+    }
+
+    footer .social-links,
+    footer .footer-info {
+        text-align: center;
+    }
+}
+
+
+
+
 /* Sosiale medier */
 .social-links {
     display: flex;
