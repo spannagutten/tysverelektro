@@ -351,6 +351,15 @@ footer a:hover {
     line-height: 1.7;
 }
 
+/* Mindre luft mellom seksjonene på forsiden */
+.section:has(+ #kontakt) {
+    padding-bottom: 20px;
+}
+
+#kontakt {
+    padding-top: 20px;
+}
+
 /* ------------------------------
    TJENESTER - MOBIL
 ------------------------------ */
@@ -552,6 +561,64 @@ footer a:hover {
     border-radius: 3px;
 }
 
+
+/* Footer: sosiale medier til venstre, firmainformasjon i midten. */
+.footer-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 footer .social-links {
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 0;
+    text-align: left;
+}
+
+.footer-info {
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.footer-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-badges img {
+    display: block;
+    width: auto;
+    max-width: 140px;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    .footer-content {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .footer-info {
+        text-align: left;
+    }
+
+    .footer-badges {
+        justify-content: flex-start;
+    }
+}
+/* Lys bakgrunn holder de svarte og fargede merkene lesbare. */
+.footer-badges img {
+    width: 104px;
+    height: 104px;
+    max-width: 100%;
+    max-height: none;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 4px;
 }
