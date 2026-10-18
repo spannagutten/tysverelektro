@@ -529,12 +529,17 @@ footer a:hover {
 
 
 @media (max-width: 700px) {
-    footer .social-links,
-    footer .footer-badges {
-        justify-content: center;
+    footer .footer-content {
+        justify-items: center;
     }
 
     footer .social-links,
+    footer .footer-badges {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
     footer .footer-info {
         text-align: center;
     }
