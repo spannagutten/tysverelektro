@@ -643,24 +643,7 @@ footer .social-links {
     gap: 12px;
 }
 
-.hero-actions .mobile-call-button {
-    display: none;
-}
 
-.mobile-call-button:focus-visible {
-    outline: 2px solid #fff;
-    outline-offset: 4px;
-}
-
-@media (max-width: 700px) {
-    .hero-actions .mobile-call-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        min-height: 48px;
-    }
-}
 /* Innebygd kart på Om oss. */
 .about-map {
     margin-top: 40px;
@@ -826,5 +809,92 @@ footer .social-links {
         outline: 2px solid #CB322C;
         outline-offset: 4px;
         border-radius: 4px;
+    }
+}
+/* Kontaktskjema – Formspree. */
+.contact-form {
+    max-width: 760px;
+    margin: 30px 0 44px;
+    padding: 28px;
+    background: #F5F3F0;
+    border: 1px solid #d8d0c9;
+    border-radius: 8px;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.form-field-wide {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    font-weight: bold;
+}
+
+.form-field input,
+.form-field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    padding: 12px;
+    font: inherit;
+    font-size: 16px;
+    color: #202020;
+    background: #fff;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.form-field small {
+    font-size: 14px;
+}
+
+.form-field input:focus-visible,
+.form-field textarea:focus-visible,
+.contact-form button:focus-visible {
+    outline: 2px solid #CB322C;
+    outline-offset: 3px;
+}
+
+.contact-form .form-note {
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.contact-form button {
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    min-height: 48px;
+}
+
+@media (max-width: 700px) {
+    .contact-form {
+        padding: 20px 16px;
+    }
+
+    .contact-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .contact-form button {
+        width: 100%;
     }
 }

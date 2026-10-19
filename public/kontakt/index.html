@@ -48,6 +48,38 @@
                 med elektriske installasjoner, service eller feilsøking.
             </p>
 
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xrpevkja" method="POST" aria-describedby="contact-form-help">
+                <p id="contact-form-help">Fyll ut skjemaet, så tar vi kontakt. Alle felt er obligatoriske med mindre de er merket valgfritt.</p>
+                <div class="contact-form-grid">
+                    <div class="form-field">
+                        <label for="contact-name">Fornavn og etternavn</label>
+                        <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="150" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-phone">Telefon</label>
+                        <input id="contact-phone" name="telefon" type="tel" autocomplete="tel" maxlength="40" required>
+                    </div>
+                    <div class="form-field form-field-wide">
+                        <label for="contact-email">E-post</label>
+                        <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+                    </div>
+                    <div class="form-field form-field-wide">
+                        <label for="contact-address">Adresse</label>
+                        <input id="contact-address" name="adresse" type="text" autocomplete="street-address" maxlength="300" aria-describedby="contact-address-help" required>
+                        <small id="contact-address-help">Skriv gateadresse, postnummer og poststed for oppdraget.</small>
+                    </div>
+                    <div class="form-field form-field-wide">
+                        <label for="contact-meter">Strømmålernummer (valgfritt)</label>
+                        <input id="contact-meter" name="strommalernummer" type="text" inputmode="numeric" maxlength="50">
+                    </div>
+                    <div class="form-field form-field-wide">
+                        <label for="contact-message">Hva gjelder det?</label>
+                        <textarea id="contact-message" name="message" rows="6" maxlength="10000" required></textarea>
+                    </div>
+                </div>
+                <p class="form-note">Opplysningene sendes via Formspree og brukes til å følge opp henvendelsen din.</p>
+                <button class="button" type="submit">Send henvendelse</button>
+            </form>
             <p>
                 <strong>Telefon:</strong><br>
                 <a href="tel:+4752779239">52 77 92 39</a>
