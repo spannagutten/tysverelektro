@@ -64,9 +64,17 @@
                         <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
                     </div>
                     <div class="form-field form-field-wide">
-                        <label for="contact-address">Adresse</label>
+                        <label for="contact-address">Gateadresse</label>
                         <input id="contact-address" name="adresse" type="text" autocomplete="street-address" maxlength="300" aria-describedby="contact-address-help" required>
-                        <small id="contact-address-help">Skriv gateadresse, postnummer og poststed for oppdraget.</small>
+                        <small id="contact-address-help">Skriv gateadresse og husnummer for oppdraget.</small>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-postcode">Postnummer</label>
+                        <input id="contact-postcode" name="postnummer" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{4}" minlength="4" maxlength="4" title="Skriv et norsk postnummer med fire siffer" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-city">Poststed</label>
+                        <input id="contact-city" name="poststed" type="text" autocomplete="address-level2" maxlength="100" required>
                     </div>
                     <div class="form-field form-field-wide">
                         <label for="contact-meter">Strømmålernummer (valgfritt)</label>
