@@ -1000,3 +1000,29 @@ footer .social-links {
         justify-self: center;
     }
 }
+/* Tilbakeknapp på ansattprofilene. */
+.employee-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 20px;
+    border: 1px solid #CB322C;
+    border-radius: 4px;
+    background-color: #CB322C;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.employee-back:hover {
+    background-color: #A92521;
+    border-color: #A92521;
+    text-decoration: none;
+}
+
+.employee-back:focus-visible {
+    outline: 2px solid #202020;
+    outline-offset: 4px;
+}
