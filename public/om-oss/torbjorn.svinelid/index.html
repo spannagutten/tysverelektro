@@ -37,7 +37,14 @@
                         <a href="/tjenester/elkontroll">Elkontroll</a>
                     </div>
                 </details>
-                <a href="/om-oss">Om oss</a>
+                <details class="services-menu about-menu">
+                    <summary>Om oss <span class="services-chevron" aria-hidden="true">⌄</span></summary>
+                    <div class="services-submenu">
+                        <a href="/om-oss">Om Tysvær Elektro</a>
+                        <a href="/om-oss#ansatte">Våre ansatte</a>
+                        <a href="/om-oss#hvor-vi-er">Her finner du oss</a>
+                    </div>
+                </details>
                 <a href="/ledige-stillinger">Ledige stillinger</a>
                 <a href="/kontakt">Kontakt oss</a>
             </nav>
@@ -125,23 +132,53 @@
             menuButton.setAttribute("aria-expanded", menuIsOpen);
 
         });
-        const servicesMenu = document.querySelector(".services-menu");
-        document.addEventListener("click", function (event) {
-            if (!servicesMenu.contains(event.target)) servicesMenu.open = false;
-        });
-        document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape" && servicesMenu.open) {
-                servicesMenu.open = false;
-                servicesMenu.querySelector("summary").focus();
-            }
-        });
-        servicesMenu.addEventListener("focusout", function () {
-            requestAnimationFrame(function () {
-                if (!servicesMenu.contains(document.activeElement)) servicesMenu.open = false;
+        const dropdowns = Array.from(nav.querySelectorAll("details.services-menu"));
+        dropdowns.forEach(function (dropdown) {
+            dropdown.addEventListener("toggle", function () {
+                if (dropdown.open) dropdowns.forEach(function (other) {
+                    if (other !== dropdown) other.open = false;
+                });
+            });
+            dropdown.addEventListener("focusout", function () {
+                requestAnimationFrame(function () {
+                    if (!dropdown.contains(document.activeElement)) dropdown.open = false;
+                });
             });
         });
+        document.addEventListener("click", function (event) {
+            dropdowns.forEach(function (dropdown) {
+                if (!dropdown.contains(event.target)) dropdown.open = false;
+            });
+        });
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                const activeDropdown = dropdowns.find(function (dropdown) {
+                    return dropdown.open && dropdown.contains(document.activeElement);
+                });
+                dropdowns.forEach(function (dropdown) { dropdown.open = false; });
+                if (activeDropdown) activeDropdown.querySelector("summary").focus();
+            }
+        });
+        function closeNavigation() {
+            dropdowns.forEach(function (dropdown) { dropdown.open = false; });
+            nav.classList.remove("open");
+            menuButton.textContent = "☰";
+            menuButton.setAttribute("aria-expanded", "false");
+        }
+        nav.addEventListener("click", function (event) {
+            const link = event.target.closest("a");
+            if (!link) return;
+            closeNavigation();
+            const destination = new URL(link.href);
+            if (destination.pathname === location.pathname && destination.hash) {
+                const target = document.getElementById(decodeURIComponent(destination.hash.slice(1)));
+                if (target) {
+                    target.focus({ preventScroll: true });
+                }
+            }
+        });
         menuButton.addEventListener("click", function () {
-            if (!nav.classList.contains("open")) servicesMenu.open = false;
+            if (!nav.classList.contains("open")) closeNavigation();
         });
     </script>
 
