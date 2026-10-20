@@ -1130,3 +1130,35 @@ footer .social-links {
     .services-submenu a { padding: 14px 32px; border-bottom: 1px solid #4A4A4A; }
     header > nav { max-height: calc(100dvh - 80px); overflow-y: auto; }
 }
+/* Ledige stillinger. */
+.careers-page > h1 { margin-top: 28px; }
+.careers-page p, .careers-page ul { max-width: 75ch; }
+.careers-intro { font-size: 20px; }
+.careers-page h2 { margin-top: 32px; font-size: 28px; }
+.careers-page ul { padding-left: 22px; margin-bottom: 24px; }
+.careers-page li { margin-bottom: 10px; }
+.job-card {
+    max-width: 800px;
+    margin-top: 32px;
+    padding: 28px;
+    background: #F5F3F0;
+    border: 1px solid #d8d0c9;
+    border-left: 4px solid #CB322C;
+    border-radius: 6px;
+}
+.job-card h2 { margin-top: 8px; }
+.job-card h2 a { color: inherit; text-decoration: none; }
+.job-card h2 a:hover { text-decoration: underline; }
+.job-location { font-size: 15px; color: #555; }
+.job-apply { margin-top: 36px; padding-top: 8px; border-top: 1px solid #c9bfb6; }
+.job-apply p a { color: inherit; text-underline-offset: 3px; }
+.job-question { margin-top: 24px; }
+.job-note { font-size: 14px; }
+.careers-page a:focus-visible { outline: 2px solid #CB322C; outline-offset: 4px; }
+@media (min-width: 701px) {
+    header > nav { gap: 18px; }
+}
+@media (max-width: 700px) {
+    .job-card { padding: 22px 18px; }
+    .careers-intro { font-size: 18px; }
+}
