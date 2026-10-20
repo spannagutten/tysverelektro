@@ -65,8 +65,13 @@
                 med elektriske installasjoner, service eller feilsøking.
             </p>
 
-            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xrpevkja" method="POST" aria-describedby="contact-form-help">
-                <p id="contact-form-help">Fyll ut skjemaet, så tar vi kontakt. Alle felt er obligatoriske med mindre de er merket valgfritt.</p>
+            <aside class="contact-form-notice" id="contact-form-notice" aria-labelledby="contact-form-notice-title">
+                <h2 id="contact-form-notice-title">Kontaktskjemaet er midlertidig stengt</h2>
+                <p>Skjemaet er under utvikling og optimalisering.</p>
+                <p>Ved henvendelser, ta kontakt på <a href="mailto:post@tysverelektro.no">post@tysverelektro.no</a>.</p>
+            </aside>
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xrpevkja" method="POST" aria-describedby="contact-form-help contact-form-notice">
+                <p id="contact-form-help">Skjemaet er satt på pause. Bruk e-postadressen over for å kontakte oss.</p>
                 <div class="contact-form-grid">
                     <div class="form-field">
                         <label for="contact-name">For- og etternavn</label>
@@ -103,7 +108,7 @@
                     </div>
                 </div>
                 <p class="form-note">Tysvær Elektro AS bruker opplysningene dine til å besvare henvendelsen og følge opp forespørselen. Skjemaet sendes via Formspree. <a href="/personvern">Les vår personvernerklæring</a>.</p>
-                <button class="button" type="submit">Send henvendelse</button>
+                <button class="button" type="submit" disabled>Skjemaet er midlertidig stengt</button>
             </form>
             <p>
                 <strong>Telefon:</strong><br>
