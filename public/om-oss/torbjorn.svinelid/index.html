@@ -27,7 +27,16 @@
 
             <nav>
                 <a href="/">Hjem</a>
-                <a href="/tjenester">Våre tjenester</a>
+                <details class="services-menu">
+                    <summary>Våre tjenester <span class="services-chevron" aria-hidden="true">⌄</span></summary>
+                    <div class="services-submenu">
+                        <a href="/tjenester">Alle tjenester</a>
+                        <a href="/tjenester/elektriske-installasjoner">Elektriske installasjoner</a>
+                        <a href="/tjenester/elbillader">Elbillader</a>
+                        <a href="/tjenester/feilsoking">Feilsøking</a>
+                        <a href="/tjenester/elkontroll">Elkontroll</a>
+                    </div>
+                </details>
                 <a href="/om-oss">Om oss</a>
                 <a href="/kontakt">Kontakt oss</a>
             </nav>
@@ -114,6 +123,24 @@
             menuButton.textContent = menuIsOpen ? "✕" : "☰";
             menuButton.setAttribute("aria-expanded", menuIsOpen);
 
+        });
+        const servicesMenu = document.querySelector(".services-menu");
+        document.addEventListener("click", function (event) {
+            if (!servicesMenu.contains(event.target)) servicesMenu.open = false;
+        });
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && servicesMenu.open) {
+                servicesMenu.open = false;
+                servicesMenu.querySelector("summary").focus();
+            }
+        });
+        servicesMenu.addEventListener("focusout", function () {
+            requestAnimationFrame(function () {
+                if (!servicesMenu.contains(document.activeElement)) servicesMenu.open = false;
+            });
+        });
+        menuButton.addEventListener("click", function () {
+            if (!nav.classList.contains("open")) servicesMenu.open = false;
         });
     </script>
 
