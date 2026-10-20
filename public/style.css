@@ -1,7 +1,51 @@
-/* ------------------------------
-   GRUNNINNSTILLINGER
------------------------------- */
+/*
+ TYSVÆR ELEKTRO — FELLES STILARK
 
+ Innhold (søk etter seksjonsnummer eller navn):
+ 01. Grunninnstillinger og typografi
+ 02. Plass til fast header
+ 03. Header og logo
+ 04. Mobilmenyknapp
+ 05. Navigasjon: grunnstil
+ 06. Header ved scrolling
+ 07. Hovedinnhold og sidebredde
+ 08. Forside: introduksjon
+ 09. Knapper: grunnstil
+ 10. Seksjoner og overskrifter
+ 11. Kontaktinformasjon og lenker
+ 12. Footer: grunnstil
+ 13. Tjenesteoversikt: bilde og tekst
+ 14. Forside: avstand til kontaktseksjonen
+ 15. Tjenesteoversikt: mobil
+ 16. Felles mobiloppsett: header, meny og innhold
+ 17. Sosiale lenker og ikoner
+ 18. Footer: kolonner, merker og mobil
+ 19. Forside: kontaktknappens plassering
+ 20. Om oss: kart
+ 21. Om oss: ansattkort
+ 22. Forside: ikonoversikt og mobilkaruseller
+ 23. Kontaktskjema: felt, knapper og mobil
+ 24. Personvern og skjemalenke
+ 25. Ansatte: profillenker og profilsider
+ 26. Tilbakeknapper: endelig utseende
+ 27. Tjenester: lenker og undersider
+ 28. Forside: klikkbare ikonfelt
+ 29. Nedtrekksmenyer: Tjenester og Om oss
+ 30. Ledige stillinger og stillingsannonser
+ 31. Ankerlenker: avstand og rulling
+ 32. Ankerlenker: fokus uten ramme
+
+ Vedlikehold:
+ - Mobilgrensen er 700 px. Mobilregler står ved de aktuelle delene.
+ - Rekkefølgen er bevart: senere regler kan overstyre tidligere regler.
+ - Grunnstiler kommer først; presiseringer for lenker, knapper og menyer
+   kommer senere. Les begge seksjonene når en komponent skal endres.
+ - services-menu brukes av begge nedtrekksmenyene.
+ - employee-back brukes også på tjeneste- og stillingssidene.
+ - Ingen selektorer, verdier eller funksjoner er endret i denne oppryddingen.
+*/
+
+/* === 01. Grunninnstillinger og typografi === */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +57,6 @@ body {
     background-color: #F5F3F0;
     color: #202020;
     line-height: 1.6;
-
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -32,105 +75,68 @@ p {
     margin-bottom: 15px;
 }
 
-
-/* ------------------------------
-   PLASS TIL HEADER
------------------------------- */
-
+/* === 02. Plass til fast header === */
 .header-space {
     height: 155px;
     flex-shrink: 0;
 }
 
-
-/* ------------------------------
-   HEADER
------------------------------- */
-
+/* === 03. Header og logo === */
 header {
     background-color: #343434;
     padding: 20px 8%;
-
     border-bottom: 1px solid #E0DAD5;
-
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    transition:
-        padding 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: padding 0.25s ease, box-shadow 0.25s ease;
 }
 
 header img {
     width: 220px;
     max-width: 100%;
     height: auto;
-
     display: block;
-
     margin-bottom: 5px;
-
-    transition:
-        width 0.25s ease,
-        margin 0.25s ease;
-
+    transition: width 0.25s ease, margin 0.25s ease;
     header > a {
-    display: inline-flex;
-    align-items: center;
-    flex-shrink: 0;
-    cursor: pointer;
-}
+        display: inline-flex;
+        align-items: center;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+
 }
 
-
-/* ------------------------------
-   MENYKNAPP
------------------------------- */
+/* === 04. Mobilmenyknapp === */
 
 /* Skjult på PC */
-
 .menu-button {
     display: none;
 }
 
-
-/* ------------------------------
-   NAVIGASJON
------------------------------- */
-
+/* === 05. Navigasjon: grunnstil === */
 nav {
     display: flex;
     gap: 30px;
-
     margin-top: 0;
-
     flex-wrap: wrap;
-
     transition: margin 0.25s ease;
 }
 
 nav a {
     color: #d5d5d5;
     text-decoration: none;
-
     font-size: 16px;
     font-weight: bold;
-
     padding-bottom: 5px;
-
     border-bottom: 2px solid transparent;
-
-    transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 nav a:hover {
@@ -138,15 +144,10 @@ nav a:hover {
     border-bottom-color: #CB322C;
 }
 
-
-/* ------------------------------
-   HEADER VED SCROLL - PC
------------------------------- */
-
+/* === 06. Header ved scrolling === */
 header.scrolled {
     padding-top: 8px;
     padding-bottom: 8px;
-
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
@@ -155,33 +156,21 @@ header.scrolled img {
     margin-bottom: 0;
 }
 
-/* ------------------------------
-   HOVEDINNHOLD
------------------------------- */
-
+/* === 07. Hovedinnhold og sidebredde === */
 main {
     width: 100%;
     max-width: 1200px;
-
     margin: 0 auto;
-
     flex: 1;
-
     background-color: #E8E2DD;
 }
 
-
-/* ------------------------------
-   HERO
------------------------------- */
-
+/* === 08. Forside: introduksjon === */
 .hero {
     background-color: #202020;
     color: white;
-
     padding: 100px 8%;
     min-height: 500px;
-
     display: flex;
     align-items: center;
 }
@@ -198,28 +187,18 @@ main {
 .hero p {
     font-size: 20px;
     color: #d5d5d5;
-
     margin-bottom: 30px;
 }
 
-
-/* ------------------------------
-   KNAPPER
------------------------------- */
-
+/* === 09. Knapper: grunnstil === */
 .button {
     display: inline-block;
-
     background-color: #CB322C;
     color: white;
-
     padding: 14px 25px;
-
     text-decoration: none;
     font-weight: bold;
-
     border-radius: 4px;
-
     transition: background-color 0.2s ease;
 }
 
@@ -227,14 +206,9 @@ main {
     background-color: #A92521;
 }
 
-
-/* ------------------------------
-   SEKSJONER
------------------------------- */
-
+/* === 10. Seksjoner og overskrifter === */
 .section {
     padding: 70px 8%;
-
     background-color: #E8E2DD;
 }
 
@@ -248,11 +222,7 @@ main {
     margin-bottom: 5px;
 }
 
-
-/* ------------------------------
-   KONTAKT
------------------------------- */
-
+/* === 11. Kontaktinformasjon og lenker === */
 .contact {
     background-color: #E8E2DD;
 }
@@ -261,9 +231,7 @@ main {
     font-size: 18px;
 }
 
-
 /* Telefon- og e-postlenker */
-
 .contact a {
     color: inherit;
     text-decoration: none;
@@ -271,15 +239,11 @@ main {
 }
 
 /* Understrek når musepekeren er over */
-
 .contact a:hover {
     text-decoration: underline;
 }
 
-/* ------------------------------
-   FOOTER
------------------------------- */
-
+/* === 12. Footer: grunnstil === */
 footer {
     background-color: #151515;
     color: #d5d5d5;
@@ -300,11 +264,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
-/* ------------------------------
-   TJENESTER - BILDE OG TEKST
------------------------------- */
-
+/* === 13. Tjenesteoversikt: bilde og tekst === */
 .service-row {
     display: flex;
     align-items: center;
@@ -313,13 +273,11 @@ footer a:hover {
 }
 
 /* Annenhver rad speilvendes */
-
 .service-row.reverse {
     flex-direction: row-reverse;
 }
 
 /* Bilde */
-
 .service-image {
     flex: 1;
     min-width: 0;
@@ -335,7 +293,6 @@ footer a:hover {
 }
 
 /* Tekst */
-
 .service-text {
     flex: 1;
     min-width: 0;
@@ -351,7 +308,7 @@ footer a:hover {
     line-height: 1.7;
 }
 
-/* Mindre luft mellom seksjonene på forsiden */
+/* === 14. Forside: avstand til kontaktseksjonen === */
 .section:has(+ #kontakt) {
     padding-bottom: 20px;
 }
@@ -360,14 +317,9 @@ footer a:hover {
     padding-top: 20px;
 }
 
-/* ------------------------------
-   TJENESTER - MOBIL
------------------------------- */
-
+/* === 15. Tjenesteoversikt: mobil === */
 @media (max-width: 700px) {
-
-    .service-row,
-    .service-row.reverse {
+    .service-row, .service-row.reverse {
         flex-direction: column;
         align-items: stretch;
         gap: 20px;
@@ -388,118 +340,74 @@ footer a:hover {
 
 }
 
-
-/* ------------------------------
-   MOBIL
------------------------------- */
-
+/* === 16. Felles mobiloppsett: header, meny og innhold === */
 @media (max-width: 700px) {
 
-    /*
-       Mobilheaderen har fast og kompakt høyde.
-    */
-
+    /* Mobilheaderen har fast og kompakt høyde. */
     .header-space {
         height: 80px;
     }
 
-    header,
-    header.scrolled {
+    header, header.scrolled {
         height: 80px;
-
         padding: 10px 20px;
-
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         gap: 0;
     }
 
-
     /* Logo */
-
-    header img,
-    header.scrolled img {
+    header img, header.scrolled img {
         width: 135px;
-
         margin: 0;
     }
 
-
     /* Menyknapp */
-
     .menu-button {
         display: block;
-
         background: none;
         border: none;
-
         color: #FFFFFF;
-
         font-size: 30px;
-
         line-height: 1;
-
         cursor: pointer;
-
         padding: 8px;
     }
 
-
     /* Menyen er skjult som standard */
-
-    nav,
-    header.scrolled nav {
+    nav, header.scrolled nav {
         display: none;
-
         position: absolute;
-
         top: 80px;
         left: 0;
-
         width: 100%;
-
         margin: 0;
-
         background-color: #343434;
-
         border-top: 1px solid #4A4A4A;
-
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
 
-
     /* Vises når menyknappen trykkes */
-
     nav.open {
         display: flex;
-
         flex-direction: column;
-
         gap: 0;
     }
 
-
     nav a {
         width: 100%;
-
         padding: 16px 20px;
-
         font-size: 16px;
-
         border-bottom: 1px solid #4A4A4A;
     }
 
     nav a:hover {
         border-bottom: 1px solid #4A4A4A;
-
         background-color: #404040;
     }
 
-
     /* Innhold */
-
     .hero {
         padding: 70px 25px;
         min-height: 400px;
@@ -527,13 +435,7 @@ footer a:hover {
 
 }
 
-
-
-
-
-
-
-/* Sosiale medier */
+/* === 17. Sosiale lenker og ikoner === */
 .social-links {
     display: flex;
     flex-wrap: wrap;
@@ -568,8 +470,7 @@ footer a:hover {
     border-radius: 3px;
 }
 
-
-/* Footer: sosiale medier til venstre, firmainformasjon i midten. */
+/* === 18. Footer: kolonner, merker og mobil === */
 .footer-content {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
@@ -606,7 +507,6 @@ footer .social-links {
     object-fit: contain;
 }
 
-
 /* Lys bakgrunn holder de svarte og fargede merkene lesbare. */
 .footer-badges img {
     width: 104px;
@@ -617,6 +517,7 @@ footer .social-links {
     background-color: #fff;
     border-radius: 4px;
 }
+
 /* Mobilreglene står etter footer-stilene slik at de får prioritet. */
 @media (max-width: 700px) {
     footer .footer-content {
@@ -624,8 +525,7 @@ footer .social-links {
         justify-items: center;
     }
 
-    footer .social-links,
-    footer .footer-badges {
+    footer .social-links, footer .footer-badges {
         width: 100%;
         justify-content: center;
         text-align: center;
@@ -634,8 +534,10 @@ footer .social-links {
     footer .footer-info {
         text-align: center;
     }
+
 }
-/* Ringeknapp på forsiden for mobil. */
+
+/* === 19. Forside: kontaktknappens plassering === */
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -643,8 +545,7 @@ footer .social-links {
     gap: 12px;
 }
 
-
-/* Innebygd kart på Om oss. */
+/* === 20. Om oss: kart === */
 .about-map {
     margin-top: 40px;
 }
@@ -670,8 +571,10 @@ footer .social-links {
     .about-map iframe {
         height: 300px;
     }
+
 }
-/* Ansattkort: bytt kun src på hvert bilde når portrettene er klare. */
+
+/* === 21. Om oss: ansattkort === */
 .team-section {
     margin-top: 48px;
 }
@@ -739,8 +642,10 @@ footer .social-links {
     .team-grid {
         grid-template-columns: minmax(0, 1fr);
     }
+
 }
-/* Forsiden: tjenester og oppdragstyper med SVG-ikoner. */
+
+/* === 22. Forside: ikonoversikt og mobilkaruseller === */
 .expertise-group {
     margin: 32px 0 40px;
 }
@@ -810,8 +715,10 @@ footer .social-links {
         outline-offset: 4px;
         border-radius: 4px;
     }
+
 }
-/* Kontaktskjema – Formspree. */
+
+/* === 23. Kontaktskjema: felt, knapper og mobil === */
 .contact-form {
     max-width: 760px;
     margin: 30px 0 44px;
@@ -842,8 +749,7 @@ footer .social-links {
     font-weight: bold;
 }
 
-.form-field input,
-.form-field textarea {
+.form-field input, .form-field textarea {
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
@@ -865,9 +771,7 @@ footer .social-links {
     font-size: 14px;
 }
 
-.form-field input:focus-visible,
-.form-field textarea:focus-visible,
-.contact-form button:focus-visible {
+.form-field input:focus-visible, .form-field textarea:focus-visible, .contact-form button:focus-visible {
     outline: 2px solid #CB322C;
     outline-offset: 3px;
 }
@@ -897,8 +801,10 @@ footer .social-links {
     .contact-form button {
         width: 100%;
     }
+
 }
-/* Personvern følger resten av nettstedets typografi og farger. */
+
+/* === 24. Personvern og skjemalenke === */
 .privacy-page h2 {
     font-size: 26px;
     margin: 32px 0 14px;
@@ -908,13 +814,13 @@ footer .social-links {
     max-width: 75ch;
 }
 
-.privacy-page a,
-.contact-form .form-note a {
+.privacy-page a, .contact-form .form-note a {
     color: inherit;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
-/* Klikkbare ansatte og egne profilsider. */
+
+/* === 25. Ansatte: profillenker og profilsider === */
 .team-profile-link {
     display: block;
     width: fit-content;
@@ -923,24 +829,17 @@ footer .social-links {
     border-radius: 50%;
 }
 
-.team-name-link,
-.employee-back,
-.employee-contact a {
+.team-name-link, .employee-back, .employee-contact a {
     color: inherit;
     text-decoration: none;
 }
 
-.team-name-link:hover,
-.employee-back:hover,
-.employee-contact a:hover {
+.team-name-link:hover, .employee-back:hover, .employee-contact a:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
 
-.team-profile-link:focus-visible,
-.team-name-link:focus-visible,
-.employee-back:focus-visible,
-.employee-contact a:focus-visible {
+.team-profile-link:focus-visible, .team-name-link:focus-visible, .employee-back:focus-visible, .employee-contact a:focus-visible {
     outline: 2px solid #CB322C;
     outline-offset: 5px;
 }
@@ -999,8 +898,10 @@ footer .social-links {
         width: min(100%, 260px);
         justify-self: center;
     }
+
 }
-/* Tilbakeknapp på ansattprofilene. */
+
+/* === 26. Tilbakeknapper: endelig utseende === */
 .employee-back {
     display: inline-flex;
     align-items: center;
@@ -1026,44 +927,105 @@ footer .social-links {
     outline: 2px solid #202020;
     outline-offset: 4px;
 }
-/* Tjenesteoversikt og undersider. */
-.service-image-link { display: block; border-radius: 8px; }
-.service-title-link { color: inherit; text-decoration: none; }
-.service-title-link:hover { text-decoration: underline; text-underline-offset: 4px; }
-.service-more { margin-top: 8px; }
-.service-image-link:focus-visible,
-.service-title-link:focus-visible,
-.service-detail .button:focus-visible {
+
+/* === 27. Tjenester: lenker og undersider === */
+.service-image-link {
+    display: block;
+    border-radius: 8px;
+}
+
+.service-title-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.service-title-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.service-more {
+    margin-top: 8px;
+}
+
+.service-image-link:focus-visible, .service-title-link:focus-visible, .service-detail .button:focus-visible {
     outline: 2px solid #CB322C;
     outline-offset: 4px;
 }
-.service-detail > h1 { margin-top: 32px; }
-.service-intro { max-width: 70ch; font-size: 20px; margin-bottom: 32px; }
+
+.service-detail > h1 {
+    margin-top: 32px;
+}
+
+.service-intro {
+    max-width: 70ch;
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+
 .service-detail-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: start;
     gap: 36px;
 }
+
 .service-detail-image img {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
-.service-detail-copy { min-width: 0; }
-.section .service-detail-copy h2 { font-size: 26px; margin-bottom: 16px; }
-.service-detail-copy h2:not(:first-child) { margin-top: 28px; }
-.service-detail-copy ul { padding-left: 22px; }
-.service-detail-copy li { margin-bottom: 8px; }
-.service-enquiry { margin-top: 40px; padding-top: 28px; border-top: 1px solid #c9bfb6; }
-.service-enquiry p { max-width: 70ch; }
-@media (max-width: 700px) {
-    .service-detail-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-    .service-intro { font-size: 18px; }
+
+.service-detail-copy {
+    min-width: 0;
 }
-/* Klikkbare ikonfelt: hele kortet er en lenke. */
-.expertise-grid .expertise-item { position: relative; padding: 0; }
+
+.section .service-detail-copy h2 {
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+
+.service-detail-copy h2:not(:first-child) {
+    margin-top: 28px;
+}
+
+.service-detail-copy ul {
+    padding-left: 22px;
+}
+
+.service-detail-copy li {
+    margin-bottom: 8px;
+}
+
+.service-enquiry {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid #c9bfb6;
+}
+
+.service-enquiry p {
+    max-width: 70ch;
+}
+
+@media (max-width: 700px) {
+    .service-detail-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .service-intro {
+        font-size: 18px;
+    }
+
+}
+
+/* === 28. Forside: klikkbare ikonfelt === */
+.expertise-grid .expertise-item {
+    position: relative;
+    padding: 0;
+}
+
 .expertise-link {
     display: flex;
     flex-direction: column;
@@ -1077,11 +1039,21 @@ footer .social-links {
     text-decoration: none;
     border-radius: 8px;
 }
-.expertise-link:hover { background: #e6dfd8; }
-.expertise-link:focus-visible { outline: 2px solid #CB322C; outline-offset: -3px; }
 
-/* Innebygd details-meny fungerer også uten JavaScript. */
-.services-menu { position: relative; }
+.expertise-link:hover {
+    background: #e6dfd8;
+}
+
+.expertise-link:focus-visible {
+    outline: 2px solid #CB322C;
+    outline-offset: -3px;
+}
+
+/* === 29. Nedtrekksmenyer: Tjenester og Om oss === */
+.services-menu {
+    position: relative;
+}
+
 .services-menu summary {
     display: flex;
     align-items: center;
@@ -1094,11 +1066,24 @@ footer .social-links {
     padding-bottom: 5px;
     border-bottom: 2px solid transparent;
 }
-.services-menu summary::-webkit-details-marker { display: none; }
-.services-menu summary:hover,
-.services-menu[open] summary { color: #CB322C; border-bottom-color: #CB322C; }
-.services-chevron { transition: transform .2s ease; }
-.services-menu[open] .services-chevron { transform: rotate(180deg); }
+
+.services-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.services-menu summary:hover, .services-menu[open] summary {
+    color: #CB322C;
+    border-bottom-color: #CB322C;
+}
+
+.services-chevron {
+    transition: transform .2s ease;
+}
+
+.services-menu[open] .services-chevron {
+    transform: rotate(180deg);
+}
+
 .services-submenu {
     position: absolute;
     top: 100%;
@@ -1111,32 +1096,98 @@ footer .social-links {
     box-shadow: 0 8px 20px rgba(0,0,0,.25);
     z-index: 1001;
 }
-.services-menu:not([open]) > .services-submenu { display: none; }
+
+.services-menu:not([open]) > .services-submenu {
+    display: none;
+}
+
 .services-submenu a {
     display: block;
     padding: 12px;
     border: 0;
     font-weight: normal;
 }
-.services-submenu a:hover { background: #454545; color: #fff; border: 0; }
-.services-menu summary:focus-visible,
-.services-submenu a:focus-visible { outline: 2px solid #fff; outline-offset: -2px; }
-@media (max-width: 700px) {
-    .expertise-grid .expertise-item { padding: 0; }
-    .expertise-link { min-height: 120px; padding: 18px 8px; }
-    .services-menu { width: 100%; }
-    .services-menu summary { padding: 16px 20px; border-bottom: 1px solid #4A4A4A; justify-content: space-between; }
-    .services-submenu { position: static; min-width: 0; padding: 0 0 8px; border: 0; border-radius: 0; box-shadow: none; background: #292929; }
-    .services-submenu a { padding: 14px 32px; border-bottom: 1px solid #4A4A4A; }
-    header > nav { max-height: calc(100dvh - 80px); overflow-y: auto; }
+
+.services-submenu a:hover {
+    background: #454545;
+    color: #fff;
+    border: 0;
 }
-/* Ledige stillinger. */
-.careers-page > h1 { margin-top: 28px; }
-.careers-page p, .careers-page ul { max-width: 75ch; }
-.careers-intro { font-size: 20px; }
-.careers-page h2 { margin-top: 32px; font-size: 28px; }
-.careers-page ul { padding-left: 22px; margin-bottom: 24px; }
-.careers-page li { margin-bottom: 10px; }
+
+.services-menu summary:focus-visible, .services-submenu a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+}
+
+@media (max-width: 700px) {
+    .expertise-grid .expertise-item {
+        padding: 0;
+    }
+
+    .expertise-link {
+        min-height: 120px;
+        padding: 18px 8px;
+    }
+
+    .services-menu {
+        width: 100%;
+    }
+
+    .services-menu summary {
+        padding: 16px 20px;
+        border-bottom: 1px solid #4A4A4A;
+        justify-content: space-between;
+    }
+
+    .services-submenu {
+        position: static;
+        min-width: 0;
+        padding: 0 0 8px;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: #292929;
+    }
+
+    .services-submenu a {
+        padding: 14px 32px;
+        border-bottom: 1px solid #4A4A4A;
+    }
+
+    header > nav {
+        max-height: calc(100dvh - 80px);
+        overflow-y: auto;
+    }
+
+}
+
+/* === 30. Ledige stillinger og stillingsannonser === */
+.careers-page > h1 {
+    margin-top: 28px;
+}
+
+.careers-page p, .careers-page ul {
+    max-width: 75ch;
+}
+
+.careers-intro {
+    font-size: 20px;
+}
+
+.careers-page h2 {
+    margin-top: 32px;
+    font-size: 28px;
+}
+
+.careers-page ul {
+    padding-left: 22px;
+    margin-bottom: 24px;
+}
+
+.careers-page li {
+    margin-bottom: 10px;
+}
+
 .job-card {
     max-width: 800px;
     margin-top: 32px;
@@ -1146,36 +1197,87 @@ footer .social-links {
     border-left: 4px solid #CB322C;
     border-radius: 6px;
 }
-.job-card h2 { margin-top: 8px; }
-.job-card h2 a { color: inherit; text-decoration: none; }
-.job-card h2 a:hover { text-decoration: underline; }
-.job-location { font-size: 15px; color: #555; }
-.job-apply { margin-top: 36px; padding-top: 8px; border-top: 1px solid #c9bfb6; }
-.job-apply p a { color: inherit; text-underline-offset: 3px; }
-.job-question { margin-top: 24px; }
-.job-note { font-size: 14px; }
-.careers-page a:focus-visible { outline: 2px solid #CB322C; outline-offset: 4px; }
+
+.job-card h2 {
+    margin-top: 8px;
+}
+
+.job-card h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.job-card h2 a:hover {
+    text-decoration: underline;
+}
+
+.job-location {
+    font-size: 15px;
+    color: #555;
+}
+
+.job-apply {
+    margin-top: 36px;
+    padding-top: 8px;
+    border-top: 1px solid #c9bfb6;
+}
+
+.job-apply p a {
+    color: inherit;
+    text-underline-offset: 3px;
+}
+
+.job-question {
+    margin-top: 24px;
+}
+
+.job-note {
+    font-size: 14px;
+}
+
+.careers-page a:focus-visible {
+    outline: 2px solid #CB322C;
+    outline-offset: 4px;
+}
+
 @media (min-width: 701px) {
-    header > nav { gap: 18px; }
+    header > nav {
+        gap: 18px;
+    }
+
 }
+
 @media (max-width: 700px) {
-    .job-card { padding: 22px 18px; }
-    .careers-intro { font-size: 18px; }
+    .job-card {
+        padding: 22px 18px;
+    }
+
+    .careers-intro {
+        font-size: 18px;
+    }
+
 }
-/* Ankerlenker tar hensyn til den faste headeren. */
-#ansatte,
-#hvor-vi-er {
+
+/* === 31. Ankerlenker: avstand og rulling === */
+#ansatte, #hvor-vi-er {
     scroll-margin-top: 175px;
 }
+
 @media (max-width: 700px) {
-    #ansatte,
-    #hvor-vi-er { scroll-margin-top: 100px; }
+    #ansatte, #hvor-vi-er {
+        scroll-margin-top: 100px;
+    }
+
 }
+
 @media (prefers-reduced-motion: no-preference) {
-    html { scroll-behavior: smooth; }
+    html {
+        scroll-behavior: smooth;
+    }
+
 }
-/* Ankerseksjonene får fokus for navigasjon, uten en ramme rundt innholdet. */
-#ansatte:focus,
-#hvor-vi-er:focus {
+
+/* === 32. Ankerlenker: fokus uten ramme === */
+#ansatte:focus, #hvor-vi-er:focus {
     outline: none;
 }
