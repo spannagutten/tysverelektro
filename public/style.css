@@ -1174,3 +1174,8 @@ footer .social-links {
 @media (prefers-reduced-motion: no-preference) {
     html { scroll-behavior: smooth; }
 }
+/* Ankerseksjonene får fokus for navigasjon, uten en ramme rundt innholdet. */
+#ansatte:focus,
+#hvor-vi-er:focus {
+    outline: none;
+}
