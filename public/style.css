@@ -1026,3 +1026,39 @@ footer .social-links {
     outline: 2px solid #202020;
     outline-offset: 4px;
 }
+/* Tjenesteoversikt og undersider. */
+.service-image-link { display: block; border-radius: 8px; }
+.service-title-link { color: inherit; text-decoration: none; }
+.service-title-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.service-more { margin-top: 8px; }
+.service-image-link:focus-visible,
+.service-title-link:focus-visible,
+.service-detail .button:focus-visible {
+    outline: 2px solid #CB322C;
+    outline-offset: 4px;
+}
+.service-detail > h1 { margin-top: 32px; }
+.service-intro { max-width: 70ch; font-size: 20px; margin-bottom: 32px; }
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 36px;
+}
+.service-detail-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.service-detail-copy { min-width: 0; }
+.section .service-detail-copy h2 { font-size: 26px; margin-bottom: 16px; }
+.service-detail-copy h2:not(:first-child) { margin-top: 28px; }
+.service-detail-copy ul { padding-left: 22px; }
+.service-detail-copy li { margin-bottom: 8px; }
+.service-enquiry { margin-top: 40px; padding-top: 28px; border-top: 1px solid #c9bfb6; }
+.service-enquiry p { max-width: 70ch; }
+@media (max-width: 700px) {
+    .service-detail-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .service-intro { font-size: 18px; }
+}
