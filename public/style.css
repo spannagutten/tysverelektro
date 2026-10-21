@@ -1407,3 +1407,10 @@ footer .social-links {
         width: 100%;
     }
 }
+/* === 36. Illustrasjoner i guider og guidefeltet === */
+.guide-hero-image { display: block; width: 100%; max-width: 960px; height: auto; margin: 28px 0 36px; border-radius: 8px; }
+.guide-card-image { display: block; width: 100%; height: auto; border-radius: 6px; margin-bottom: 22px; }
+.home-guides-image { display: block; width: 200px; height: auto; border-radius: 6px; flex-shrink: 0; }
+@media (max-width: 700px) {
+    .home-guides-image { width: 100%; max-width: 420px; }
+}
