@@ -1414,3 +1414,14 @@ footer .social-links {
 @media (max-width: 700px) {
     .home-guides-image { width: 100%; max-width: 420px; }
 }
+
+/* === 37. Tjenesteundersider: innrykk under Alle tjenester === */
+.services-submenu a[href^="/tjenester/"] {
+    padding-left: 30px;
+}
+
+@media (max-width: 700px) {
+    .services-submenu a[href^="/tjenester/"] {
+        padding-left: 50px;
+    }
+}
