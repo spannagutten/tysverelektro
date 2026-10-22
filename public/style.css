@@ -1440,9 +1440,20 @@ footer .social-links {
 
 /* Aktiv guide vises i midten og løftes frem. */
 .guide-carousel-track { --guide-width: calc((100% - 48px) / 3); align-items: stretch; padding: 22px 0 30px; scroll-snap-type: x mandatory; }
-.guide-carousel-track::before, .guide-carousel-track::after { content: ''; flex: 0 0 max(0px, calc((100% - var(--guide-width)) / 2 - 24px)); }
+
 .guide-slide { flex-basis: var(--guide-width); scroll-snap-align: center; transform: scale(.92); opacity: .72; transition: transform .35s ease, opacity .35s ease, box-shadow .35s ease; }
 .guide-slide.is-active { transform: scale(1.03); opacity: 1; border-color: #CB322C; box-shadow: 0 8px 18px #34343426; }
 @media (max-width: 900px) { .guide-carousel-track { --guide-width: 60%; } }
 @media (max-width: 700px) { .guide-carousel-track { --guide-width: 82%; } }
 @media (prefers-reduced-motion: reduce) { .guide-slide { transition: none; } }
+
+/* Sirkulær karusell med sidepiler og skjult skrollefelt. */
+.guide-carousel-window { position: relative; }
+.guide-carousel-track { scrollbar-width: none; }
+.guide-carousel-track::-webkit-scrollbar { display: none; }
+.guide-carousel-track.is-repositioning { scroll-snap-type: none; }
+.guide-carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; display: grid; place-items: center; width: 44px; height: 52px; padding: 9px; border: 0; border-radius: 6px; background: #f5f3f0ed; color: #CB322C; cursor: pointer; box-shadow: 0 2px 8px #34343420; }
+.guide-carousel-arrow:hover { background: #CB322C; color: white; }
+.guide-carousel-arrow svg { width: 26px; height: 30px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.guide-carousel-prev { left: 4px; }
+.guide-carousel-next { right: 4px; }
