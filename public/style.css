@@ -1425,3 +1425,18 @@ footer .social-links {
         padding-left: 50px;
     }
 }
+/* === 38. Forside: automatisk guidekarusell === */
+.guide-carousel-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.guide-carousel-heading h2 { margin: 0; }
+.guide-carousel-controls { display: flex; gap: 8px; }
+.guide-carousel-controls button { border: 0; border-radius: 5px; padding: 10px 16px; background: #CB322C; color: #fff; font: inherit; cursor: pointer; }
+.guide-carousel-controls button:hover { background: #A92521; }
+.guide-carousel-track { position: relative; display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px 18px; }
+.guide-slide { flex: 0 0 calc((100% - 48px) / 3); min-width: 0; scroll-snap-align: start; background: #F5F3F0; border: 1px solid #d8d0c9; border-radius: 8px; overflow: hidden; color: #343434; text-decoration: none; }
+.guide-slide img { display: block; width: 100%; height: auto; }
+.guide-slide h3 { font-size: 22px; padding: 20px 20px 10px; margin: 0; }
+.guide-slide > span { display: block; padding: 0 20px 22px; color: #CB322C; font-weight: bold; }
+.guide-slide:hover h3 { text-decoration: underline; }
+.guide-carousel a:focus-visible, .guide-carousel button:focus-visible, .guide-carousel-track:focus-visible { outline: 3px solid #CB322C; outline-offset: 2px; }
+@media (max-width: 900px) { .guide-slide { flex-basis: calc((100% - 24px) / 2); } }
+@media (max-width: 700px) { .guide-slide { flex-basis: 85%; } .guide-carousel-heading { align-items: flex-start; flex-direction: column; } }
