@@ -1,0 +1,6 @@
+.cms-rich-text > :first-child { margin-top: 0; }
+.cms-rich-text img { display: block; max-width: 100%; height: auto; border-radius: 8px; }
+.cms-rich-text ul, .cms-rich-text ol { padding-left: 24px; }
+.cms-figure { margin: 28px 0; }
+.cms-figure figcaption { margin-top: 12px; font-size: 15px; color: #555; }
+.cms-services-heading { margin-top: 30px; }

@@ -1,0 +1,2483 @@
+[
+  {
+    "_id": "guide-downlights",
+    "_type": "guide",
+    "title": "Downlights",
+    "slug": {
+      "_type": "slug",
+      "current": "downlights"
+    },
+    "intro": "Les produktdataene før du velger: lysmengde, lysfarge, spredning og montering er forskjellige egenskaper.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "e26c17bba555",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Se på mer enn watt",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "5d6d8e1736e1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b7103ca278a7",
+            "text": "Downlights oppgis blant annet med effekt i watt, lysstrøm i lumen, fargetemperatur i kelvin og lysspredningsvinkel. SGs produktdata viser disse som separate størrelser. Watt alene forteller derfor ikke hvilken lysmengde eller lysfordeling du får.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "73ebf49c5279",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b888b29826bb",
+            "text": "Montering må passe produktet",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "98a5cfeff35e",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2d0c8af807ef",
+            "text": "Innfellingsmål, høyde og avstand til brennbare materialer er produktspesifikke. Enkelte downlights er uttrykkelig laget for montering direkte i isolasjon. Det gjelder ikke automatisk andre modeller. Følg monteringsanvisningen for det valgte produktet.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "745b618d7102",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "310b86e0b62b",
+            "text": "Dimming og lysfarge",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "02a814c35e68",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "5e796e48332a",
+            "text": "Kontroller angitt styringsmåte og anbefalt dimmer. DimToWarm er en egen funksjon som gjør lyset varmere ved dimming; det er ikke det samme som vanlig dimming med fast lysfarge.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "1413d7d3f26b",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "775bc5c30e27",
+            "text": "Bruk fagfolk til fast installasjon",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "016d7daf196b",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2a7541babb57",
+            "text": "DSBs liste over tillatt egenarbeid omfatter ikke etablering av fast downlight-installasjon. Overlat arbeidet til fagfolk.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "7d7a00c3bf4a",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_type": "link",
+            "_key": "c28aca23f1ef",
+            "href": "/guider/fargetemperatur"
+          }
+        ],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "c28aca23f1ef",
+            "text": "Les også om ",
+            "marks": []
+          },
+          {
+            "_type": "span",
+            "_key": "c9ca44276565",
+            "text": "fargetemperatur og kelvin",
+            "marks": [
+              "c28aca23f1ef"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "2a2b47bf21a3",
+            "text": ".",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "order": 0,
+    "_imageSource": {
+      "src": "/images/guider/downlights.svg",
+      "alt": "Illustrasjon av innfelte downlights og lyskjeglene deres"
+    },
+    "_localImageUrl": "/import-assets/d1f62217b3a23481fa8f.svg"
+  },
+  {
+    "_id": "guide-elbillader",
+    "_type": "guide",
+    "title": "Elbillader hjemme",
+    "slug": {
+      "_type": "slug",
+      "current": "elbillader"
+    },
+    "intro": "En ladeboks og det elektriske anlegget må vurderes sammen. DSB anbefaler fastmontert ladeboks til hjemmelading.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "86db2eb31814",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Hvorfor ladeboks?",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "a4b5d60f7f92",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b7103ca278a7",
+            "text": "DSB anbefaler en fastmontert ladeboks, også kalt Mode 3. Den er laget for belastningen ved elbillading og kan ha funksjoner for å fordele tilgjengelig effekt.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "d4d650a10f64",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b888b29826bb",
+            "text": "Hva må avklares før montering?",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "2ec2d05beae0",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "310b86e0b62b",
+            "text": "Antall biler og hvor mange som skal lade samtidig.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "3591b4f4df74",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "5e796e48332a",
+            "text": "Ønsket ladetid og behov for laststyring.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "53feca3269e9",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "775bc5c30e27",
+            "text": "Tilgjengelig effekt, strømnettype og eventuelt behov for oppgradering.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "1524dc19c364",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2a7541babb57",
+            "text": "Fast kabel eller Type 2-kontakt.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "2f3064e8bb29",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "c28aca23f1ef",
+            "text": "Dette er punkter DSB anbefaler å avklare med en registrert elvirksomhet.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "081c1001d2dc",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "13682ac41860",
+            "text": "Hva med en vanlig stikkontakt?",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "57c704aed349",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "be057d4ca44c",
+            "text": "DSBs fagveileder viser til at det fra januar 2023 ikke skal bygges nye stikkontakter for kjøretøylading med utstyr over 5 A etter NEK 400:2022. Eldre ladeuttak kan fortsatt brukes når de oppfyller kravene som gjelder for dem og bruken er sikker. Få eksisterende løsning vurdert fremfor å anta at enhver stikkontakt er egnet.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "9b229c1868f3",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "ec7f1f650671",
+            "text": "Ikke bruk skjøteledning eller adapter til elbillading.",
+            "marks": [
+              "strong"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "aee544ceddfe",
+            "text": " DSB peker på risiko for elektrisk sjokk og brann.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "20d3814f03fb",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_type": "link",
+            "_key": "9f9af029585b",
+            "href": "/tjenester/elbillader"
+          }
+        ],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "9f9af029585b",
+            "text": "Les om montering av elbillader hos oss",
+            "marks": [
+              "9f9af029585b"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "7f03f3f2febc",
+            "text": ".",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "order": 1,
+    "_imageSource": {
+      "src": "/images/guider/elbillader.svg",
+      "alt": "Illustrasjon av en bil tilkoblet en fast ladeboks"
+    },
+    "_localImageUrl": "/import-assets/0e1adb6d83781de99c34.svg"
+  },
+  {
+    "_id": "guide-elkontroll",
+    "_type": "guide",
+    "title": "Elkontroll i boligen",
+    "slug": {
+      "_type": "slug",
+      "current": "elkontroll"
+    },
+    "intro": "En elkontroll kan avdekke feil tidlig og gi deg bedre oversikt over tilstanden til det elektriske anlegget i boligen.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "0dc0ec620c82",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Hvorfor er elkontroll lurt?",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "e3a1c6559c40",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b7103ca278a7",
+            "text": "Feil i elektriske anlegg og feil bruk av elektrisk utstyr kan føre til brann og personskade. En profesjonell kontroll kan oppdage feil før de utvikler seg videre. Når feil blir fulgt opp og utbedret, bidrar det til et tryggere hjem.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "dbbc43ca52ad",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b888b29826bb",
+            "text": "Få oversikt og råd om oppfølging",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "c3a47d91edff",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2d0c8af807ef",
+            "text": "En elkontroll gir en faglig vurdering av anlegget innenfor kontrollens avtalte omfang. Kontrollen kan gi et grunnlag for å prioritere vedlikehold og nødvendige utbedringer. Den kan også gi nyttige råd om trygg bruk av elektrisk utstyr.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "4ebe2298807b",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "310b86e0b62b",
+            "text": "Når kan det være aktuelt?",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "bf0a3fc08d8a",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "5e796e48332a",
+            "text": "Er du usikker på tilstanden til anlegget, eller mangler du oversikt over tidligere arbeid og dokumentasjon, kan det være lurt å be om en vurdering. Det kan også være aktuelt når du overtar en bolig. Avtal med elektroforetaket hvilken kontroll som passer til formålet.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "75bc180a4fd7",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "775bc5c30e27",
+            "text": "Ulike kontroller har ulike formål",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "9890d8c34b6e",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2a7541babb57",
+            "text": "NEK 405-2 gjelder brannforebyggende elkontroll i bolig. Teknisk tilstandsvurdering ved boligsalg er en egen kontrollform. Avklar omfang og dokumentasjon på forhånd. En kontroll beskriver forholdene på kontrolltidspunktet og er ingen garanti mot fremtidige feil.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "032bdd00b135",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "13682ac41860",
+            "text": "Opplever du brent lukt, knitring eller unormal varme, bør du kontakte elektriker raskt. Ikke vent på en planlagt kontroll.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "order": 2,
+    "_imageSource": {
+      "src": "/images/guider/elkontroll.svg",
+      "alt": "Illustrasjon av en bolig og et kontrollskjema"
+    },
+    "_localImageUrl": "/import-assets/7c7289828ee7bd1ba2b1.svg"
+  },
+  {
+    "_id": "guide-fargetemperatur",
+    "_type": "guide",
+    "title": "Fargetemperatur og kelvin",
+    "slug": {
+      "_type": "slug",
+      "current": "fargetemperatur"
+    },
+    "intro": "Kelvin beskriver lysfargen. Lumen beskriver lysmengden. Det er to forskjellige egenskaper.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "ccc2e497eb87",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Hva betyr K?",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "db5022689411",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b7103ca278a7",
+            "text": "Fargetemperatur oppgis i kelvin, forkortet K. Lavere kelvintall gir et varmere, mer gulaktig hvitt lys. Høyere tall gir et kjøligere hvitt lys. Verdien står på emballasjen eller i produktets spesifikasjoner.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "79143eb2e4cd",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "ec7f1f650671",
+            "text": "Samme lysfarge ved utskifting",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "41c8480af60f",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "3a2dc677d8e8",
+            "text": "Vil du at en ny pære skal ha tilsvarende lysfarge som den gamle, sammenlign kelvinverdien. To produkter med ulike kelvintall har ulik angitt lysfarge selv om begge er hvite.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "34d8cac0da9e",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "9f9af029585b",
+            "text": "Endres lysfargen når du dimmer?",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "3e91d7481bac",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "135debd48370",
+            "text": "Det avhenger av produktet. DimToWarm-produkter er laget for at lyset skal bli varmere når det dimmes. SGs Soft Slim DimToWarm er eksempelvis oppgitt til 2000–2800 K. Dette er produktdata, ikke et generelt område for alle downlights.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "34239e8977d0",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_type": "link",
+            "_key": "f37062d9a655",
+            "href": "/guider/watt-lumen-lux"
+          }
+        ],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "f37062d9a655",
+            "text": "Vil du sammenligne hvor mye lys lampene gir, se også ",
+            "marks": []
+          },
+          {
+            "_type": "span",
+            "_key": "9a70776c7433",
+            "text": "guiden om watt, lumen og lux",
+            "marks": [
+              "f37062d9a655"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "1c6637a8f2e1",
+            "text": ".",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "order": 3,
+    "_imageSource": {
+      "src": "/images/guider/fargetemperatur.svg",
+      "alt": "Illustrasjon av lamper med varmt og kjøligere lys"
+    },
+    "_localImageUrl": "/import-assets/5d2b95667f81604c34d5.svg"
+  },
+  {
+    "_id": "guide-sikringsskap",
+    "_type": "guide",
+    "title": "På tide å oppgradere sikringsskapet?",
+    "slug": {
+      "_type": "slug",
+      "current": "sikringsskap"
+    },
+    "intro": "Faresignaler og vern er viktigere enn å gjette ut fra alderen på skapet.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "2b1fcb0ec106",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Tegn som bør undersøkes",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "91345592f602",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b7103ca278a7",
+            "text": "DSB anbefaler å kontakte elektriker hvis skapdøren er unormalt varm, det lukter brent plast eller du hører knitring. Gjentatte sikringsutkoblinger og flere lyspærer som blafrer samtidig er også tegn som bør undersøkes.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "cf12a875a7e8",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b888b29826bb",
+            "text": "Hva gjør jordfeilbryteren?",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "76c7847d2ef6",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2d0c8af807ef",
+            "text": "Jordfeilbryteren kobler ut ved jordfeil og skal bidra til å beskytte mot elektrisk sjokk og brann. I nyere anlegg kan funksjonen være kombinert med automatsikringen. I eldre anlegg kan jordfeilvern være ettermontert på enkelte kurser.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "293bba2d5cfb",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "310b86e0b62b",
+            "text": "Kontroller vernene etter anvisningen",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "fae1875fd636",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "5e796e48332a",
+            "text": "DSB anbefaler å teste jordfeilbryteren minst årlig. Følg instruksjonen i skapet. Overspenningsvern skal også kontrolleres etter veiledningen; et vern som er skadet av overspenning må skiftes.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "5ed6209f5c5c",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "775bc5c30e27",
+            "text": "Få behovet vurdert",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "66d1cfb58382",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2a7541babb57",
+            "text": "Faresignalene er grunn til undersøkelse, men sier ikke alene om hele skapet må skiftes. La en elektriker vurdere feil, vern og behovet for oppgradering. Arbeid inne i den faste installasjonen skal overlates til fagfolk.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "order": 4,
+    "_imageSource": {
+      "src": "/images/guider/sikringsskap.svg",
+      "alt": "Illustrasjon av et sikringsskap med automatsikringer"
+    },
+    "_localImageUrl": "/import-assets/abb38bbfd821e2ed3706.svg"
+  },
+  {
+    "_id": "guide-watt-lumen-lux",
+    "_type": "guide",
+    "title": "Watt, lumen og lux",
+    "slug": {
+      "_type": "slug",
+      "current": "watt-lumen-lux"
+    },
+    "intro": "Tre enheter som forteller forskjellige ting om strømbruk og lys.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "72885d7e0ff3",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2815f6b98b7a",
+            "text": "Definisjonene er beskrevet av NIST og U.S. Department of Energy. Én lux er én lumen per kvadratmeter.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "e928d3ff68ee",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "cae91e45aed8",
+            "text": "Hvorfor ikke bare sammenligne watt?",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "5c770418705d",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "ba30fd97b412",
+            "text": "Ulike lyskilder kan gi samme lysmengde med forskjellig effektforbruk. Sammenlign lumen når du skal sammenligne avgitt lysmengde, og watt når du vurderer effektforbruk. Lysutbytte uttrykkes som lumen per watt.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "42573f39f9f1",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "09d66f6e5482",
+            "text": "Et forenklet regneeksempel",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "fe802707fc16",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "29350804a152",
+            "text": "Hvis 1000 lumen treffer jevnt over en flate på 10 m², er gjennomsnittet 100 lux. Dette er et regneeksempel fra definisjonen, ikke en beregning av et rom: ikke alt lyset fra en lampe treffer nødvendigvis den aktuelle flaten.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "62c729362a31",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "ba613d1fc0d9",
+            "text": "Lysfarge er en egen egenskap",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "cbc5905c76d2",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_type": "link",
+            "_key": "9d323717c1d5",
+            "href": "/guider/fargetemperatur"
+          }
+        ],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "9d323717c1d5",
+            "text": "Kelvin beskriver lysfarge. Les mer i ",
+            "marks": []
+          },
+          {
+            "_type": "span",
+            "_key": "3717862a00f8",
+            "text": "guiden om fargetemperatur",
+            "marks": [
+              "9d323717c1d5"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "85f1002bf139",
+            "text": ".",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "order": 5,
+    "_imageSource": {
+      "src": "/images/guider/watt-lumen-lux.svg",
+      "alt": "Illustrasjon av en lyspære med enhetene W, lm og lx"
+    },
+    "_localImageUrl": "/import-assets/010e58be09f83f428e91.svg"
+  },
+  {
+    "_id": "service-elbillader",
+    "_type": "service",
+    "title": "Elbillader",
+    "slug": {
+      "_type": "slug",
+      "current": "elbillader"
+    },
+    "intro": "Vi monterer elbilladere hjemme, hos bedrifter og på offentlige parkeringsplasser.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "92ed3357eca2",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "fb96549631c8",
+            "text": "En ladeløsning som passer behovet ditt",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "8e810c40c741",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b1d5781111d8",
+            "text": "Vi hjelper deg med å finne en egnet løsning ut fra parkeringsplassen, bilbruken og det elektriske anlegget. Før montering vurderer vi blant annet kapasitet og føringsvei for kabler.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "f29080252f05",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "91032ad7bbcb",
+            "text": "Ved flere ladepunkter ser vi på hvordan løsningen kan tilpasses dagens behov og eventuell senere utvidelse. Vi kan også vurdere om laststyring er aktuelt for å tilpasse ladingen til tilgjengelig kapasitet.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "97ae4c0eb9d7",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "22d200f8670d",
+            "text": "Dette kan vi hjelpe med",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "83cad49e335c",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e1822db470e6",
+            "text": "Montering av ladeboks ved bolig eller hytte",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "b75271dbebe1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Ladepunkter ved arbeidsplasser og parkeringsanlegg",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "16b607dcaff3",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b7103ca278a7",
+            "text": "Vurdering av kapasitet og plassering",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      }
+    ],
+    "order": 0,
+    "_imageSource": {
+      "src": "/images/tjenester/zaptec_miljøbilde.jpg",
+      "alt": "Elbillader fra Zaptec"
+    },
+    "_localImageUrl": "/import-assets/38dbed97a509b32efc64.jpg"
+  },
+  {
+    "_id": "service-elektriske-installasjoner",
+    "_type": "service",
+    "title": "Elektriske installasjoner",
+    "slug": {
+      "_type": "slug",
+      "current": "elektriske-installasjoner"
+    },
+    "intro": "Vi utfører elektriske installasjoner og oppgraderinger for privatpersoner og bedrifter på Haugalandet.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "59769be68894",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "fb96549631c8",
+            "text": "Anlegg tilpasset bygget og bruken",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "c4ae942137be",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b1d5781111d8",
+            "text": "Skal du bygge nytt, pusse opp eller utvide eksisterende lokaler? Vi hjelper deg med å planlegge plassering av stikkontakter, belysning og andre elektriske punkter, slik at løsningen passer behovene dine.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "6ce2c5a50f67",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "91032ad7bbcb",
+            "text": "Vi kan også vurdere eksisterende anlegg og behovet for oppgradering. Ta kontakt med en beskrivelse av prosjektet, så avklarer vi omfang og videre fremgangsmåte.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "97ae4c0eb9d7",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "22d200f8670d",
+            "text": "Dette kan vi hjelpe med",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "2079d24546af",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e1822db470e6",
+            "text": "Elektriske installasjoner i nybygg og påbygg",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "df7286eb842c",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Nye stikkontakter og belysningspunkter",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "a01d43642ab2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b7103ca278a7",
+            "text": "Oppgradering ved oppussing og endret bruk",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      }
+    ],
+    "order": 1,
+    "_imageSource": {
+      "src": "/images/tjenester/sg_miljøbilde.png",
+      "alt": "Elektriske installasjoner og belysning"
+    },
+    "_localImageUrl": "/import-assets/bc044321dce6fdaa2d55.png"
+  },
+  {
+    "_id": "service-elkontroll",
+    "_type": "service",
+    "title": "Elkontroll",
+    "slug": {
+      "_type": "slug",
+      "current": "elkontroll"
+    },
+    "intro": "Vi utfører elkontroller og har sertifiserte ansatte som kontrollerer elektriske anlegg.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "f2bf8a3f0a89",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "fb96549631c8",
+            "text": "Få bedre oversikt over tilstanden",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "0164c4057526",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b1d5781111d8",
+            "text": "En elkontroll kan avdekke feil og mangler og gi et bedre grunnlag for vedlikehold og utbedringer. Vi avtaler kontrollens omfang ut fra bygget, anlegget og behovet ditt.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "2fb28576db78",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "91032ad7bbcb",
+            "text": "Etter kontrollen går vi gjennom funn og aktuelle tiltak med deg. Har du fått et konkret krav fra et forsikringsselskap eller en annen oppdragsgiver, må vi avklare hvilken kontroll og dokumentasjon som etterspørres før bestilling.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "97ae4c0eb9d7",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "22d200f8670d",
+            "text": "Dette kan vi hjelpe med",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "577db1fbbd80",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e1822db470e6",
+            "text": "Kontroll av elektriske anlegg etter avtalt omfang",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "b13eca5db868",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Gjennomgang av funn og behov for utbedring",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "c6898061c838",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b7103ca278a7",
+            "text": "Oppfølging av feil og mangler",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      }
+    ],
+    "order": 2,
+    "_imageSource": {
+      "src": "/images/tjenester/elkontroll.jpg",
+      "alt": "Illustrasjonsbilde av en elektriker som utfører målinger ved et sikringsskap"
+    },
+    "_localImageUrl": "/import-assets/7652dec94738b465a171.jpg"
+  },
+  {
+    "_id": "service-feilsoking",
+    "_type": "service",
+    "title": "Feilsøking",
+    "slug": {
+      "_type": "slug",
+      "current": "feilsoking"
+    },
+    "intro": "Vi hjelper deg med å finne og utbedre feil i det elektriske anlegget.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "c712febd248b",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "fb96549631c8",
+            "text": "Vi undersøker årsaken til problemet",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "2ba6658ef203",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b1d5781111d8",
+            "text": "Sikringer som løser ut, belysning som ikke fungerer eller strøm som forsvinner på deler av anlegget kan ha ulike årsaker. Vi undersøker problemet og utfører relevante målinger for å finne feilen.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "b7396ff1b3d5",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "91032ad7bbcb",
+            "text": "Når årsaken er avklart, forklarer vi hva vi har funnet og hva som bør gjøres videre. Omfanget av en utbedring avhenger av feilen og tilstanden til anlegget.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "97ae4c0eb9d7",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "22d200f8670d",
+            "text": "Dette kan vi hjelpe med",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "8cd02cb11e54",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e1822db470e6",
+            "text": "Feil på kurser, stikkontakter og belysning",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "ba0d2fa0256f",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Undersøkelse av gjentatte strømavbrudd eller utkoblinger",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "e0552bd075ff",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b7103ca278a7",
+            "text": "Utbedring og vurdering av videre tiltak",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      }
+    ],
+    "order": 3,
+    "_imageSource": {
+      "src": "/images/tjenester/fluke_miljøbilde.png",
+      "alt": "Måleinstrument for elektrisk feilsøking"
+    },
+    "_localImageUrl": "/import-assets/e004d60e52930bea8fb7.png"
+  },
+  {
+    "_id": "job-elektriker",
+    "_type": "job",
+    "title": "Vi søker elektriker",
+    "slug": {
+      "_type": "slug",
+      "current": "elektriker"
+    },
+    "intro": "Vil du bruke fagkunnskapen din på varierte oppdrag på Haugalandet? Tysvær Elektro AS søker en elektriker som er opptatt av kvalitet, gode løsninger og fornøyde kunder.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "fa2fbae640dc",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e1822db470e6",
+            "text": "Vi er en lokal elektrobedrift med 8 ansatte og kontor i Skjoldastraumen. Vi utfører elektriske installasjoner, service og vedlikehold for privatpersoner og bedrifter. Nå ønsker vi en ny kollega med på laget.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "8afed85b8982",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Dette vil du jobbe med",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "b2ecff1d1871",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b888b29826bb",
+            "text": "Installasjon og oppgradering av elektriske anlegg i boliger og næringsbygg.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "b2c591a440fa",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2d0c8af807ef",
+            "text": "Service, vedlikehold og feilsøking hos kundene våre.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "57cd08d2cfeb",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "310b86e0b62b",
+            "text": "Montering av blant annet belysning og elbilladere.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "1b69c3041e63",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "5e796e48332a",
+            "text": "Planlegging og dokumentasjon av eget arbeid.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "bddf8ae5fbb5",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "775bc5c30e27",
+            "text": "Kundedialog og samarbeid med kollegaer for å finne gode løsninger.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "2be58df6b2d4",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2a7541babb57",
+            "text": "Krav til stillingen",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "bf483ada88b4",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "13682ac41860",
+            "text": "Elektrikerfagbrev gr. L.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "5e0576b3d218",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "be057d4ca44c",
+            "text": "Førerkort klasse B.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "e1d15817be79",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "717b2f3d8816",
+            "text": "Vi ser etter deg som",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "66371782a5fa",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "3a2dc677d8e8",
+            "text": "Jobber nøyaktig og tar ansvar for kvalitet og sikkerhet.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "dbe0efdc69ed",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "9f9af029585b",
+            "text": "Trives med både selvstendig arbeid og samarbeid.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "2e0ee3697c22",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "135debd48370",
+            "text": "Er serviceinnstilt og kommuniserer godt med kunder og kollegaer.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "c29cc31949a8",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "f37062d9a655",
+            "text": "Er løsningsorientert og holder orden på oppdrag og utstyr.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "57a7c874698c",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2815f6b98b7a",
+            "text": "Vil holde deg faglig oppdatert og bidra med kunnskapen din.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "52783fa9042b",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "cae91e45aed8",
+            "text": "Erfaring fra serviceoppdrag er en fordel. Vi vil også gjerne høre fra deg som er nyutdannet og motivert for å utvikle deg i faget.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "bdecb45b068e",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "ba30fd97b412",
+            "text": "En lokal arbeidshverdag",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "89d833a4f434",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "09d66f6e5482",
+            "text": "Hos oss blir du del av et lite team med nærhet til både kollegaer og kunder. Oppdragene varierer fra mindre servicearbeid til installasjoner og oppgraderinger, hos kunder over hele Haugalandet.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "b439600f139f",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "29350804a152",
+            "text": "Ta kontakt for mer informasjon om stillingsomfang, ansettelsesform, lønn og oppstart.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "8f39535e4e16",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "9d323717c1d5",
+            "text": "Slik søker du",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "ba912e9551a1",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_type": "link",
+            "_key": "e26973e6ee8a",
+            "href": "mailto:oystein@tysverelektro.no?subject=S%C3%B8knad%20%E2%80%93%20elektriker"
+          }
+        ],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e26973e6ee8a",
+            "text": "Send en kort søknad og CV til ",
+            "marks": []
+          },
+          {
+            "_type": "span",
+            "_key": "787d41d9c35c",
+            "text": "oystein@tysverelektro.no",
+            "marks": [
+              "e26973e6ee8a"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "cd0613ba91fb",
+            "text": ". Fortell litt om deg selv, erfaringen din og hvorfor du ønsker å jobbe hos Tysvær Elektro.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "d79acf861080",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_type": "link",
+            "_key": "a609bb8ab05a",
+            "href": "tel:+4793497622"
+          },
+          {
+            "_type": "link",
+            "_key": "c28097ad29ab",
+            "href": "mailto:oystein@tysverelektro.no"
+          }
+        ],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "a609bb8ab05a",
+            "text": "Har du spørsmål? Kontakt fagansvarlig installatør Øystein Trovåg på ",
+            "marks": []
+          },
+          {
+            "_type": "span",
+            "_key": "c28097ad29ab",
+            "text": "934 97 622",
+            "marks": [
+              "a609bb8ab05a"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "ef2afd226e33",
+            "text": " eller ",
+            "marks": []
+          },
+          {
+            "_type": "span",
+            "_key": "43814346e214",
+            "text": "oystein@tysverelektro.no",
+            "marks": [
+              "c28097ad29ab"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "fffb8e85796e",
+            "text": ".",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "cf7486d81fb1",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "a1773d62a609",
+            "text": "Send bare opplysninger som er relevante for søknaden. Unngå fødselsnummer og sensitive personopplysninger.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "order": 0,
+    "applicationEmail": "oystein@tysverelektro.no",
+    "contact": {
+      "_type": "reference",
+      "_ref": "employee-oystein-trovag"
+    }
+  },
+  {
+    "_id": "job-elkontrollor",
+    "_type": "job",
+    "title": "Vi søker elkontrollør",
+    "slug": {
+      "_type": "slug",
+      "current": "elkontrollor"
+    },
+    "intro": "Er du elektriker med NEK 405-3-sertifisering og ønsker å jobbe med elkontroll på Haugalandet? Tysvær Elektro AS søker en elkontrollør som er grundig, selvstendig og opptatt av elektrisk sikkerhet.",
+    "body": [
+      {
+        "_type": "block",
+        "_key": "fa2fbae640dc",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e1822db470e6",
+            "text": "Vi er en lokal elektrobedrift med 8 ansatte og kontor i Skjoldastraumen. Vi utfører elektriske installasjoner, service og vedlikehold for privatpersoner og bedrifter. Nå ønsker vi en ny kollega med på laget.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "8afed85b8982",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "e6c3dd630428",
+            "text": "Dette vil du jobbe med",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "92e114f017f3",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "b888b29826bb",
+            "text": "Elkontroll av elektriske anlegg hos kunder over hele Haugalandet, innenfor ditt sertifiseringsområde.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "12460bad3493",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2d0c8af807ef",
+            "text": "Undersøkelser og målinger for å avdekke feil og mangler.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "bf6daf73e14e",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "310b86e0b62b",
+            "text": "Dokumentasjon av kontrollene og utarbeidelse av rapporter.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "07e2145cc423",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "5e796e48332a",
+            "text": "Gjennomgang av funn og anbefalte tiltak sammen med kunden.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "184877db8f16",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "775bc5c30e27",
+            "text": "Samarbeid med kollegaer om oppfølging og utbedring av avvik.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "4faada6913f5",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2a7541babb57",
+            "text": "Service og feilsøking ved behov.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "4aeffcdc1a3b",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "c28aca23f1ef",
+            "text": "Krav til stillingen",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "196db994cd1c",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "be057d4ca44c",
+            "text": "Elektrikerfagbrev gr. L.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "bcc8616bb780",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "717b2f3d8816",
+            "text": "Gyldig personsertifisering etter NEK 405-3.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "6cd5656254e2",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "ec7f1f650671",
+            "text": "Førerkort klasse B.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "4178ebe93932",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "3a2dc677d8e8",
+            "text": "Vi ser etter deg som",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "0f4bc1549909",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "135debd48370",
+            "text": "Jobber nøyaktig og tar ansvar for kvalitet og sikkerhet.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "f44aa3db3a6d",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "f37062d9a655",
+            "text": "Trives med både selvstendig arbeid og samarbeid.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "7550643c0937",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "2815f6b98b7a",
+            "text": "Er serviceinnstilt og kommuniserer godt med kunder og kollegaer.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "fbd621a1741b",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "cae91e45aed8",
+            "text": "Er løsningsorientert og holder orden på oppdrag og utstyr.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "39f874262981",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "ba30fd97b412",
+            "text": "Vil holde deg faglig oppdatert og bidra med kunnskapen din.",
+            "marks": []
+          }
+        ],
+        "listItem": "bullet",
+        "level": 1
+      },
+      {
+        "_type": "block",
+        "_key": "4a745e4f6050",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "09d66f6e5482",
+            "text": "Erfaring med elkontroll, rapportering og kundedialog er en fordel. Oppgi i søknaden at du har NEK 405-3-sertifisering, og gyldighetstiden for sertifikatet.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "d68e1debe93b",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "29350804a152",
+            "text": "En lokal arbeidshverdag",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "ff8117c3498c",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "ba613d1fc0d9",
+            "text": "Hos oss blir du del av et lite team med nærhet til både kollegaer og kunder. Du vil jobbe med elkontroll og oppfølging av elektriske anlegg hos kunder over hele Haugalandet, og bidra med service og feilsøking ved behov.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "6a1ade547011",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "9d323717c1d5",
+            "text": "Ta kontakt for mer informasjon om stillingsomfang, ansettelsesform, lønn og oppstart.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "2e956a1a5228",
+        "style": "h2",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "af53d4aa0b91",
+            "text": "Slik søker du",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "01bfb8360ebb",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_type": "link",
+            "_key": "7fdec83a2662",
+            "href": "mailto:oystein@tysverelektro.no?subject=S%C3%B8knad%20%E2%80%93%20elkontroll%C3%B8r"
+          }
+        ],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "7fdec83a2662",
+            "text": "Send en kort søknad og CV til ",
+            "marks": []
+          },
+          {
+            "_type": "span",
+            "_key": "5f6955d227a3",
+            "text": "oystein@tysverelektro.no",
+            "marks": [
+              "7fdec83a2662"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "81110df80ca4",
+            "text": ". Fortell litt om deg selv, erfaringen din og hvorfor du ønsker å jobbe hos Tysvær Elektro.",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "371b33660a56",
+        "style": "normal",
+        "markDefs": [
+          {
+            "_type": "link",
+            "_key": "89a1c105a472",
+            "href": "tel:+4793497622"
+          },
+          {
+            "_type": "link",
+            "_key": "0026476a20bf",
+            "href": "mailto:oystein@tysverelektro.no"
+          }
+        ],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "89a1c105a472",
+            "text": "Har du spørsmål? Kontakt fagansvarlig installatør Øystein Trovåg på ",
+            "marks": []
+          },
+          {
+            "_type": "span",
+            "_key": "0026476a20bf",
+            "text": "934 97 622",
+            "marks": [
+              "89a1c105a472"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "efbc0848b836",
+            "text": " eller ",
+            "marks": []
+          },
+          {
+            "_type": "span",
+            "_key": "8ada660e06b7",
+            "text": "oystein@tysverelektro.no",
+            "marks": [
+              "0026476a20bf"
+            ]
+          },
+          {
+            "_type": "span",
+            "_key": "1a1162ec85b1",
+            "text": ".",
+            "marks": []
+          }
+        ]
+      },
+      {
+        "_type": "block",
+        "_key": "a9dd8ca37569",
+        "style": "normal",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "_key": "c30749cf5bc7",
+            "text": "Send bare opplysninger som er relevante for søknaden. Unngå fødselsnummer og sensitive personopplysninger.",
+            "marks": []
+          }
+        ]
+      }
+    ],
+    "order": 1,
+    "applicationEmail": "oystein@tysverelektro.no",
+    "contact": {
+      "_type": "reference",
+      "_ref": "employee-oystein-trovag"
+    }
+  },
+  {
+    "_id": "employee-tor-eriksen",
+    "_type": "employee",
+    "name": "Tor Eriksen",
+    "slug": {
+      "_type": "slug",
+      "current": "tor.eriksen"
+    },
+    "role": "Daglig leder",
+    "order": 0,
+    "phone": "982 66 930",
+    "email": "post@tysverelektro.no",
+    "_imageSource": {
+      "src": "/images/pfp.png",
+      "alt": "Tor Eriksen"
+    },
+    "_localImageUrl": "/import-assets/6a8781b50829616a3786.png"
+  },
+  {
+    "_id": "employee-oystein-trovag",
+    "_type": "employee",
+    "name": "Øystein Trovåg",
+    "slug": {
+      "_type": "slug",
+      "current": "oystein.trovag"
+    },
+    "role": "Fagansvarlig installatør",
+    "order": 1,
+    "phone": "934 97 622",
+    "email": "oystein@tysverelektro.no",
+    "_imageSource": {
+      "src": "/images/pfp.png",
+      "alt": "Øystein Trovåg"
+    },
+    "_localImageUrl": "/import-assets/6a8781b50829616a3786.png"
+  },
+  {
+    "_id": "employee-anne-grethe-dueland",
+    "_type": "employee",
+    "name": "Anne Grethe Dueland",
+    "slug": {
+      "_type": "slug",
+      "current": "anne.grethe.dueland"
+    },
+    "role": "Kontormedarbeider",
+    "order": 2,
+    "phone": "982 66 927",
+    "email": "anne.grethe@tysverelektro.no",
+    "_imageSource": {
+      "src": "/images/pfp.png",
+      "alt": "Anne Grethe Dueland"
+    },
+    "_localImageUrl": "/import-assets/6a8781b50829616a3786.png"
+  },
+  {
+    "_id": "employee-jan-tore-sorensen",
+    "_type": "employee",
+    "name": "Jan Tore Sørensen",
+    "slug": {
+      "_type": "slug",
+      "current": "jan.tore.sorensen"
+    },
+    "role": "Serviceelektriker gr. L & elkontrollør",
+    "order": 3,
+    "phone": "451 53 508",
+    "email": "jan.tore@tysverelektro.no",
+    "_imageSource": {
+      "src": "/images/pfp.png",
+      "alt": "Jan Tore Sørensen"
+    },
+    "_localImageUrl": "/import-assets/6a8781b50829616a3786.png"
+  },
+  {
+    "_id": "employee-tor-ole-solheim",
+    "_type": "employee",
+    "name": "Tor Ole Solheim",
+    "slug": {
+      "_type": "slug",
+      "current": "tor.ole.solheim"
+    },
+    "role": "Serviceelektriker gr. L",
+    "order": 4,
+    "phone": "982 66 924",
+    "email": "tor.ole@tysverelektro.no",
+    "_imageSource": {
+      "src": "/images/pfp.png",
+      "alt": "Tor Ole Solheim"
+    },
+    "_localImageUrl": "/import-assets/6a8781b50829616a3786.png"
+  },
+  {
+    "_id": "employee-erik-erland",
+    "_type": "employee",
+    "name": "Erik Erland",
+    "slug": {
+      "_type": "slug",
+      "current": "erik.erland"
+    },
+    "role": "Elektrikerlærling",
+    "order": 5,
+    "phone": "941 03 848",
+    "email": "erik@tysverelektro.no",
+    "_imageSource": {
+      "src": "/images/pfp.png",
+      "alt": "Erik Erland"
+    },
+    "_localImageUrl": "/import-assets/6a8781b50829616a3786.png"
+  },
+  {
+    "_id": "employee-lars-lindanger",
+    "_type": "employee",
+    "name": "Lars Lindanger",
+    "slug": {
+      "_type": "slug",
+      "current": "lars.lindanger"
+    },
+    "role": "Elektriker gr. L deltid",
+    "order": 6,
+    "email": "post@tysverelektro.no",
+    "_imageSource": {
+      "src": "/images/pfp.png",
+      "alt": "Lars Lindanger"
+    },
+    "_localImageUrl": "/import-assets/6a8781b50829616a3786.png"
+  },
+  {
+    "_id": "employee-torbjorn-svinelid",
+    "_type": "employee",
+    "name": "Torbjørn Svinelid",
+    "slug": {
+      "_type": "slug",
+      "current": "torbjorn.svinelid"
+    },
+    "role": "Elektriker gr. L deltid",
+    "order": 7,
+    "email": "post@tysverelektro.no",
+    "_imageSource": {
+      "src": "/images/pfp.png",
+      "alt": "Torbjørn Svinelid"
+    },
+    "_localImageUrl": "/import-assets/6a8781b50829616a3786.png"
+  },
+  {
+    "_id": "home",
+    "_type": "home",
+    "title": "Din lokale elektriker på Haugalandet",
+    "intro": "Vi utfører elektriske installasjoner, service og vedlikehold for privat- og bedriftskunder.",
+    "guidesHeading": "Guider og tips",
+    "careersHeading": "Har du lyst til å bli en del av laget?",
+    "careersText": "Vi søker elektrikere!"
+  },
+  {
+    "_id": "siteSettings",
+    "_type": "siteSettings",
+    "companyName": "Tysvær Elektro AS",
+    "email": "post@tysverelektro.no",
+    "phone": "52 77 92 39",
+    "address": "Skjoldastraumsvegen 1065\n5567 Skjoldastraumen",
+    "facebook": "https://www.facebook.com/p/Tysv%C3%A6r-Elektro-61560527642679/?locale=nb_NO",
+    "instagram": "https://www.instagram.com/tysver_elektro_as/"
+  }
+]

@@ -1,0 +1,6 @@
+packages:
+  - studio
+nodeLinker: hoisted
+allowBuilds:
+  esbuild: true
+  workerd: true

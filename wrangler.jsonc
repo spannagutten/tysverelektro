@@ -1,8 +1,14 @@
 {
   "name": "tysverelektro",
-  "compatibility_date": "2026-09-15",
+  "routes": [{"pattern":"te.erikerland.no","custom_domain":true},{"pattern":"adm.te.erikerland.no","custom_domain":true}],
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-11-03",
   "assets": {
     "directory": "./public",
-    "html_handling": "drop-trailing-slash"
-  }
+    "binding": "ASSETS",
+    "html_handling": "drop-trailing-slash",
+    "run_worker_first": ["/*", "!/images/*", "!/style.css", "!/cms.css", "!/guide-carousel.js", "!/admin/static/*"]
+  },
+  "vars": {"SANITY_PROJECT_ID":"89cnbpsm","SANITY_DATASET":"production"},
+  "build": {"command":"node scripts/build.mjs"}
 }

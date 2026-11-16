@@ -1,0 +1,15 @@
+
+# Sanity Studio
+**/node_modules/
+studio/dist/
+studio/.sanity/
+.env
+.env.*
+!.env.example
+*.log
+
+# Generated CMS build and local backup
+.wrangler/
+.build/
+public/admin/
+cms-backup/

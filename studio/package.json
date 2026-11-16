@@ -1,0 +1,28 @@
+{
+  "name": "tysver-elektro-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev --host 127.0.0.1",
+    "build": "sanity build",
+    "login": "sanity login --provider google --no-open",
+    "deploy": "sanity deploy",
+    "import:content": "sanity exec import-content.mjs --with-user-token"
+  },
+  "dependencies": {
+    "sanity": "latest",
+    "@sanity/cli": "latest",
+    "@sanity/client": "latest",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/react": "^19.2.0"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}
