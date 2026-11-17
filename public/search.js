@@ -3,14 +3,23 @@ const search=document.querySelector('.site-search');
 if(search){
  const panel=search.querySelector('.site-search-panel'),toggle=search.querySelector('summary');
  const input=panel.querySelector('input'),status=panel.querySelector('.search-status'),list=panel.querySelector('.search-suggestions');
+ const mobile=window.matchMedia('(max-width: 700px)'),nav=search.closest('nav');
+ const desktopPosition=document.createComment('Search position on desktop');
+ search.before(desktopPosition);
+ function layoutSearch(){
+  if(mobile.matches){nav.prepend(search);search.open=true;}
+  else{desktopPosition.after(search);search.open=false;}
+ }
+ layoutSearch();
+ mobile.addEventListener('change',layoutSearch);
  let indexPromise, timer;
  const element=(tag,text,cls)=>{const e=document.createElement(tag);e.textContent=text;if(cls)e.className=cls;return e;};
  const addContact=()=>{list.append(element('p','Vi kan hjelpe likevel. Fortell oss hva du trenger, så finner vi en løsning sammen.'));const a=element('a','Kontakt oss','search-all');a.href='/kontakt';list.append(a);};
- search.addEventListener('toggle',()=>{if(search.open)input.focus();});
- document.addEventListener('click',event=>{if(!search.contains(event.target))search.open=false;});
- search.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();search.open=false;toggle.focus();}});
- search.addEventListener('focusout',()=>requestAnimationFrame(()=>{if(!search.contains(document.activeElement))search.open=false;}));
- document.querySelector('.menu-button')?.addEventListener('click',()=>{if(!search.closest('nav')?.classList.contains('open'))search.open=false;});
+ search.addEventListener('toggle',()=>{if(search.open&&!mobile.matches)input.focus();});
+ document.addEventListener('click',event=>{if(!mobile.matches&&!search.contains(event.target))search.open=false;});
+ search.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();if(mobile.matches){input.blur();}else{search.open=false;toggle.focus();}}});
+ search.addEventListener('focusout',()=>requestAnimationFrame(()=>{if(!mobile.matches&&!search.contains(document.activeElement))search.open=false;}));
+ document.querySelector('.menu-button')?.addEventListener('click',()=>{if(!mobile.matches&&!search.closest('nav')?.classList.contains('open'))search.open=false;});
  async function suggest(){
   const q=input.value.trim();list.replaceChildren();
   if(q.length<2){status.textContent='Skriv minst to tegn for å få forslag.';return;}
