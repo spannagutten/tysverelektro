@@ -75,3 +75,14 @@ Etter publisering åpner https://adm.te.erikerland.no redigeringspanelet på /ad
 I Sanity: API → CORS origins → legg til https://adm.te.erikerland.no med Allow credentials.
 Wrangler beholder te.erikerland.no og legger til administrasjonsdomenet ved publisering.
 Rootdomenet erikerland.no berøres ikke. Ingen brukere inviteres.
+
+## Søkestatistikk
+Sanity-fanen Søkestatistikk henter tellinger fra Cloudflare D1 (SEARCH_STATS).
+Kun en innlogget, menneskelig administrator i Sanity-prosjekt 89cnbpsm får lese API-et.
+Ingen servernøkkel er bygget inn. Ved cookie-innlogging uten tilgjengelig økttoken må brukeren logge inn på nytt.
+Kjente fagord telles separat; annen fritekst blir Andre søk. Ingen rå søketekst lagres i databasen.
+Submit og Se alle treff telles; forslag og lasting av resultatsiden telles ikke.
+Dagene følger Europe/Oslo, med 90 dagers automatisk sletting (daglig cron).
+Innsending har samme-origin-kontroll, størrelsesgrense og 10 hendelser/minutt per transient IP-nøkkel.
+Tallene er indikasjoner, ikke garantert botfrie eller unike besøk. DNT/GPC respekteres.
+Migrasjoner: wrangler d1 migrations apply SEARCH_STATS --local (test) / --remote (produksjon).

@@ -38,3 +38,11 @@ if(search){
  input.addEventListener('keydown',event=>{if(event.key==='ArrowDown'){const first=list.querySelector('a');if(first){event.preventDefault();first.focus();}}});
  list.addEventListener('keydown',event=>{const links=[...list.querySelectorAll('a')],i=links.indexOf(document.activeElement);if(event.key==='ArrowDown'){event.preventDefault();links[Math.min(i+1,links.length-1)]?.focus();}if(event.key==='ArrowUp'){event.preventDefault();if(i<=0)input.focus();else links[i-1].focus();}});
 }
+
+// Count explicit searches only. Suggestions and page reloads do not generate events.
+function countSearch(q){
+ if(!q?.trim()||navigator.doNotTrack==='1'||navigator.globalPrivacyControl)return;
+ fetch('/api/search-event',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({q:q.slice(0,100)}),keepalive:true}).catch(()=>{});
+}
+document.querySelectorAll('.site-search-form').forEach(form=>form.addEventListener('submit',()=>countSearch(new FormData(form).get('q'))));
+document.addEventListener('click',event=>{const link=event.target.closest('a.search-all');if(link&&event.button===0&&!event.ctrlKey&&!event.metaKey&&!event.shiftKey&&!event.altKey&&new URL(link.href).pathname==='/sok')countSearch(new URL(link.href).searchParams.get('q'));});

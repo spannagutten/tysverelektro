@@ -1,3 +1,4 @@
+import {recordSearch,readStatistics,pruneStatistics} from './search-analytics.mjs';
 import {searchIndex, searchPage} from './search.mjs';
 import {groupContent, pageFor, createRewriter} from './render.mjs';
 const query = '*[_type in ["home","employee","guide","service","job","page","siteSettings"] && !defined(cmsMigrationTarget)] | order(order asc, _id asc) {...,"image":image{...,"url":asset->url},"contact":contact->{name,phone,email},"body":body[]{...,"url":asset->url},"bio":bio[]{...,"url":asset->url}}';
@@ -43,7 +44,11 @@ export async function notFoundResponse(request, env) {
   return new Response(request.method === 'HEAD' ? null : asset.body, {status:404, headers});
 }
 export default {
+  async scheduled(event,env,ctx){ctx.waitUntil(pruneStatistics(env));},
   async fetch(request,env,ctx) {
+    const requestPath=new URL(request.url).pathname;
+    if(requestPath==='/api/search-stats')return readStatistics(request,env);
+    if(requestPath==='/api/search-event')return recordSearch(request,env,async()=>searchIndex(await contentFor(env,ctx,new URL(request.url))));
     if(!['GET','HEAD'].includes(request.method)) return new Response('Metoden er ikke tillatt.',{status:405,headers:{Allow:'GET, HEAD'}});
     const url = new URL(request.url);
     // The dedicated admin hostname only serves the editor.
