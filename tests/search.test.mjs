@@ -18,5 +18,12 @@ test('Ingen treff viser kontaktlenke og søketekst escapes',()=>{
  const html=searchPage(content,'<script>alert(1)</script>');assert(!html.includes('<script>'));assert(html.includes('&lt;script&gt;'));assert(html.includes('Fant du ikke'));assert(html.includes('href="/kontakt"'));
 });
 test('Søkeikon følger Kontakt oss i navigasjonen',()=>{
- const html=navigation(content);assert.match(html,/Kontakt oss<\/a><a class="site-search-toggle"/);
+ const html=navigation(content);assert.match(html,/Kontakt oss<\/a><details class="site-search"/);
+});
+test('Søket er en utvidbar del av headeren uten dialog eller modal',async()=>{
+ const {searchLink}=await import('../src/search-ui.mjs');
+ assert(searchLink.startsWith('<details'));
+ assert(searchLink.includes('class="site-search-panel"'));
+ assert(searchLink.includes('action="/sok"'));
+ assert(!searchLink.includes('<dialog'));
 });

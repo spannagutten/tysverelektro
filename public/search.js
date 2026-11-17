@@ -1,13 +1,16 @@
 import {searchItems} from './search-core.mjs';
-const dialog=document.querySelector('.site-search-dialog');
-if(dialog){
- const input=dialog.querySelector('input'),status=dialog.querySelector('.search-status'),list=dialog.querySelector('.search-suggestions');
+const search=document.querySelector('.site-search');
+if(search){
+ const panel=search.querySelector('.site-search-panel'),toggle=search.querySelector('summary');
+ const input=panel.querySelector('input'),status=panel.querySelector('.search-status'),list=panel.querySelector('.search-suggestions');
  let indexPromise, timer;
  const element=(tag,text,cls)=>{const e=document.createElement(tag);e.textContent=text;if(cls)e.className=cls;return e;};
  const addContact=()=>{list.append(element('p','Vi kan hjelpe likevel. Fortell oss hva du trenger, så finner vi en løsning sammen.'));const a=element('a','Kontakt oss','search-all');a.href='/kontakt';list.append(a);};
- document.querySelectorAll('.site-search-toggle').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();dialog.showModal();input.focus();}));
- dialog.querySelector('.search-close').addEventListener('click',()=>dialog.close());
- dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
+ search.addEventListener('toggle',()=>{if(search.open)input.focus();});
+ document.addEventListener('click',event=>{if(!search.contains(event.target))search.open=false;});
+ search.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();search.open=false;toggle.focus();}});
+ search.addEventListener('focusout',()=>requestAnimationFrame(()=>{if(!search.contains(document.activeElement))search.open=false;}));
+ document.querySelector('.menu-button')?.addEventListener('click',()=>{if(!search.closest('nav')?.classList.contains('open'))search.open=false;});
  async function suggest(){
   const q=input.value.trim();list.replaceChildren();
   if(q.length<2){status.textContent='Skriv minst to tegn for å få forslag.';return;}

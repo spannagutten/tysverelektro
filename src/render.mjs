@@ -1,4 +1,4 @@
-import {searchLink,searchDialog} from './search-ui.mjs';
+import {searchLink} from './search-ui.mjs';
 // HTML generated from published Sanity content. Never interpolate unescaped editor input.
 export const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 export function safeLink(value, fallback = '#') {
@@ -108,7 +108,7 @@ export function createRewriter(page, content, Rewriter = HTMLRewriter) {
   const setHtml = html => ({element(element){element.setInnerContent(html,{html:true});}});
   const setText = text => ({element(element){element.setInnerContent(String(text ?? ''));}});
   const rw = new Rewriter().on('header nav',setHtml(navigation(content)));
-  rw.on('body',{element(e){e.append(searchDialog+'<script type="module" src="/search.js"></script>',{html:true});}});
+  rw.on('body',{element(e){e.append('<script type="module" src="/search.js"></script>',{html:true});}});
   if(page.type==='search') rw.on('title',setText('Søk | Tysvær Elektro')).on('head',{element(e){e.append('<meta name="robots" content="noindex, follow">',{html:true});}});
   const body = mainContent(page,content);
   if (body !== null) rw.on('main',setHtml(body));
