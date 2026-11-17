@@ -96,7 +96,7 @@ for order,card in enumerate(about.all(cls='team-card')):
     image(doc,card);docs.append(doc)
 main=parse(root/'index.html').find('main'); hero=main.find(cls='hero-content')
 docs.append({'_id':'home','_type':'home','title':text(hero,'h2'),'intro':text(hero,'p'),'guidesHeading':text(main,cls='guide-carousel-heading'),'careersHeading':text(main.find(cls='home-promo-careers'),'h2'),'careersText':text(main.find(cls='home-promo-careers'),'p')})
-docs.append({'_id':'siteSettings','_type':'siteSettings','companyName':'Tysvær Elektro AS','email':'post@tysverelektro.no','phone':'52 77 92 39','address':'Skjoldastraumsvegen 1065\n5567 Skjoldastraumen','facebook':'https://www.facebook.com/p/Tysv%C3%A6r-Elektro-61560527642679/?locale=nb_NO','instagram':'https://www.instagram.com/tysver_elektro_as/'})
+docs.append({'_id':'siteSettings','_type':'siteSettings','companyName':'Tysvær Elektro AS','email':'post@tysverelektro.no','phone':'934 97 622','address':'Skjoldastraumsvegen 1065\n5567 Skjoldastraumen','facebook':'https://www.facebook.com/p/Tysv%C3%A6r-Elektro-61560527642679/?locale=nb_NO','instagram':'https://www.instagram.com/tysver_elektro_as/'})
 output=Path(__file__).with_name('prepared-content.json');output.write_text(json.dumps(docs,ensure_ascii=False,indent=2),encoding='utf8')
 assert len([d for d in docs if d['_type']=='employee'])==8
 assert len([d for d in docs if d['_type']=='guide'])==6

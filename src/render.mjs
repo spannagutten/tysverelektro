@@ -42,7 +42,10 @@ export function portableText(blocks = []) {
 }
 export function groupContent(documents) {
   const docs = documents.filter(d => !d._id.startsWith('drafts.') && !d._id.startsWith('versions.') && !d.cmsMigrationTarget);
-  return {docs, home: docs.find(d => d._type === 'home'), settings: docs.find(d => d._type === 'siteSettings') || {}, employees: docs.filter(d => d._type === 'employee' && slugOf(d)), guides: docs.filter(d => d._type === 'guide' && slugOf(d)), services: docs.filter(d => d._type === 'service' && slugOf(d)), jobs: docs.filter(d => d._type === 'job' && slugOf(d)), pages: docs.filter(d => d._type === 'page' && slugOf(d))};
+  const settings = {...(docs.find(d => d._type === 'siteSettings') || {})};
+  // Keep the retired switchboard number out of the website, including older CMS settings.
+  if (['52779239','4752779239'].includes(String(settings.phone || '').replace(/[^0-9]/g,''))) settings.phone = '934 97 622';
+  return {docs, home: docs.find(d => d._type === 'home'), settings, employees: docs.filter(d => d._type === 'employee' && slugOf(d)), guides: docs.filter(d => d._type === 'guide' && slugOf(d)), services: docs.filter(d => d._type === 'service' && slugOf(d)), jobs: docs.filter(d => d._type === 'job' && slugOf(d)), pages: docs.filter(d => d._type === 'page' && slugOf(d))};
 }
 function contactLinks(person) {
   const links = [];

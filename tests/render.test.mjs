@@ -38,3 +38,14 @@ test('Søknader og spørsmål henter riktig kontaktperson',()=>{
   const job={...guide,_type:'job',slug:{current:'elektriker'},applicationEmail:'oystein@tysverelektro.no',contact:{name:'Øystein Trovåg',phone:'934 97 622',email:'oystein@tysverelektro.no'}};
   const content=groupContent([job]);const html=mainContent(pageFor('/ledige-stillinger/elektriker',content),content);assert(!html.includes('post@'));assert(html.includes('mailto:oystein@tysverelektro.no'));assert(html.includes('tel:+4793497622'));
 });
+
+test('Gammelt fellesnummer erstattes uten å endre ansattes telefonnumre',()=>{
+ const people=[{...employee,phone:'941 03 848'},{...employee,_id:'tor',phone:'982 66 930'}];
+ for(const phone of ['52 77 92 39','+4752779239']){
+  const content=groupContent([{_id:'siteSettings',_type:'siteSettings',phone},...people]);
+  assert.equal(content.settings.phone,'934 97 622');
+  assert.deepEqual(content.employees.map(p=>p.phone),['941 03 848','982 66 930']);
+ }
+ const content=groupContent([{_id:'siteSettings',_type:'siteSettings',phone:'934 97 622'}]);
+ assert.equal(content.settings.phone,'934 97 622');
+});
