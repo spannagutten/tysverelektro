@@ -4,3 +4,7 @@
 .cms-figure { margin: 28px 0; }
 .cms-figure figcaption { margin-top: 12px; font-size: 15px; color: #555; }
 .cms-services-heading { margin-top: 30px; }
+
+/* The map connects to Google only after the visitor chooses it. */
+.map-privacy-choice [hidden] { display:none !important; }
+.map-privacy-choice button { margin-bottom:16px; font:inherit; cursor:pointer; }
