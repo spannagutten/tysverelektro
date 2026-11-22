@@ -1474,17 +1474,18 @@ footer .social-links {
     .guide-carousel { padding-bottom: 32px; }
     .guide-carousel + .home-expertise { padding-top: 32px; }
 }
-/* Tjenestemeny: underordnede tjenester og egne sider på samme hovednivå. */
-.services-submenu .services-overview-link { font-weight: 700; color: #fff; background: #404040; border-left: 3px solid #CB322C; padding: 14px 16px; }
-.services-group-list { list-style: none; margin: 6px 14px 10px 20px; padding: 0 0 0 12px; border-left: 1px solid #666; }
-.services-submenu .services-group-list a { padding: 10px 14px; font-size: 15px; border-bottom: 0; }
-.services-resource-links { border-top: 1px solid #666; margin-top: 8px; padding-top: 8px; }
-.services-submenu .services-resource-links a { padding: 14px 18px; font-weight: 700; color: #f5f3f0; }
+/* Samme rolige lenkestil i Tjenester og Om oss. */
+.services-submenu .services-overview-link { flex: 1; width: auto; min-width: 0; padding: 12px; color: #d5d5d5; background: transparent; border: 0; font-size: 16px; font-weight: normal; }
+.services-group-list { list-style: none; margin: 0; padding: 0; }
+.services-submenu .services-group-list a { padding: 12px 12px 12px 28px; font-size: 16px; font-weight: normal; }
+.services-resource-links { margin: 0; padding: 0; border: 0; }
+.services-submenu .services-resource-links a { padding: 12px; color: #d5d5d5; font-size: 16px; font-weight: normal; }
+.services-submenu .services-overview-link:hover, .services-submenu .services-resource-links a:hover { background: #454545; color: #fff; }
 @media (max-width: 700px) {
-    .services-submenu .services-overview-link { padding: 14px 29px; }
-    .services-group-list { margin-left: 32px; margin-right: 20px; }
-    .services-submenu .services-group-list a { padding: 12px 16px; }
-    .services-submenu .services-resource-links a { padding: 16px 32px; }
+    .services-submenu .services-overview-link, .services-submenu .services-resource-links a { padding: 14px 32px; }
+    .services-submenu .services-group-list a { padding: 14px 48px; }
+    .services-group > .services-group-summary { border-bottom: 1px solid #4A4A4A; }
+    .services-submenu .services-resource-links a { border-bottom: 1px solid #4A4A4A; }
 }
 
 /* Mobilmeny: la menyen rulle uten å flytte siden bak eller krympe innholdet. */
@@ -1534,10 +1535,9 @@ html.mobile-menu-open, html.mobile-menu-open body { overflow: hidden; overscroll
 }
 
 /* Alle tjenester: lenken åpner oversikten, pila utvider underlista. */
-.services-group > .services-group-summary { display:flex; align-items:stretch; list-style:none; background:#404040; cursor:pointer; }
+.services-group > .services-group-summary { display:flex; align-items:stretch; list-style:none; background:transparent; cursor:pointer; }
 .services-group-summary::-webkit-details-marker { display:none; }
-.services-submenu .services-overview-link { flex:1; width:auto; min-width:0; }
-.services-group-arrow { display:flex; align-items:center; justify-content:center; width:48px; min-height:48px; flex-shrink:0; color:#f5f3f0; border-left:1px solid #666; font-size:22px; }
+.services-group-arrow { display:flex; align-items:center; justify-content:center; width:44px; min-height:44px; flex-shrink:0; color:#d5d5d5; border:0; font-size:16px; }
 .services-group[open] > .services-group-summary > .services-group-arrow { transform:rotate(180deg); }
 .services-group > summary:focus-visible { outline:2px solid #fff; outline-offset:-2px; }
 .services-group:not([open]) > .services-group-list { display:none; }
