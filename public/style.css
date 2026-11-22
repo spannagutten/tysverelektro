@@ -1504,6 +1504,31 @@ html.mobile-menu-open, html.mobile-menu-open body { overflow: hidden; overscroll
         background: #343434;
     }
     header > nav > * { flex-shrink: 0; }
+    /* Block navigation needs explicit full-width links; inline anchors collapse rows. */
+    header > nav > a {
+        display: block;
+        width: 100%;
+        min-height: 56px;
+        margin: 0;
+        padding: 16px 20px;
+    }
+    header > nav > .services-menu {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    header > nav > .services-menu > summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 56px;
+    }
+    header > nav > .services-menu > summary > .services-chevron {
+        display: inline-block;
+        flex: 0 0 auto;
+        margin-left: auto;
+    }
     header > nav .services-submenu { background: #292929; }
     header > nav .services-group-list { flex-shrink: 0; }
 }
