@@ -1537,7 +1537,12 @@ html.mobile-menu-open, html.mobile-menu-open body { overflow: hidden; overscroll
 /* Alle tjenester: lenken åpner oversikten, pila utvider underlista. */
 .services-group > .services-group-summary { display:flex; align-items:stretch; list-style:none; background:transparent; cursor:pointer; }
 .services-group-summary::-webkit-details-marker { display:none; }
-.services-group-arrow { display:flex; align-items:center; justify-content:center; width:44px; min-height:44px; flex-shrink:0; color:#d5d5d5; border:0; font-size:16px; }
-.services-group[open] > .services-group-summary > .services-group-arrow { transform:rotate(180deg); }
+.services-group-arrow { display:flex; align-items:center; justify-content:center; width:44px; min-height:44px; flex-shrink:0; color:#d5d5d5; border-left:1px solid #555; background:#3b3b3b; font-size:16px; }
+.services-group[open] > .services-group-summary > .services-group-arrow { background:#454545; }
 .services-group > summary:focus-visible { outline:2px solid #fff; outline-offset:-2px; }
 .services-group:not([open]) > .services-group-list { display:none; }
+
+/* Diskrete skillelinjer i begge nedtrekksmenyer, også på PC. */
+.services-submenu > a, .services-resource-links > a, .services-group-list > li > a, .services-group > .services-group-summary { border-bottom: 1px solid #4A4A4A; }
+.services-submenu .services-overview-link { border-bottom: 0; }
+.services-submenu a:hover { border-bottom-color: #4A4A4A; }
