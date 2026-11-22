@@ -42,8 +42,12 @@ export function portableText(blocks = []) {
   }
   close(); return html;
 }
+export function neutralGuideBlocks(blocks) {
+  if(!Array.isArray(blocks)) return blocks;
+  return blocks.filter(block=>!/^Les om montering av elbillader hos oss\.$/.test(plain(block).trim()));
+}
 export function groupContent(documents) {
-  const docs = documents.filter(d => !d._id.startsWith('drafts.') && !d._id.startsWith('versions.') && !d.cmsMigrationTarget);
+  const docs = documents.filter(d => !d._id.startsWith('drafts.') && !d._id.startsWith('versions.') && !d.cmsMigrationTarget).map(d=>d._type==='guide'?{...d,body:neutralGuideBlocks(d.body)}:d);
   const settings = {...(docs.find(d => d._type === 'siteSettings') || {})};
   // Keep the retired switchboard number out of the website, including older CMS settings.
   if (['52779239','4752779239'].includes(String(settings.phone || '').replace(/[^0-9]/g,''))) settings.phone = '934 97 622';
@@ -98,7 +102,7 @@ export function mainContent(page, content) {
   const d = page.doc;
   if (page.type === 'employee') return `<section class="section employee-section"><p><a class="employee-back" href="/om-oss#ansatte">← Tilbake til alle ansatte</a></p><div class="employee-profile">${picture(d,'employee-photo','/images/pfp.png')}<div class="employee-details"><h1>${escapeHtml(d.name)}</h1><p class="employee-role">${escapeHtml(d.role)}</p><div class="cms-rich-text">${portableText(d.bio)}</div><div class="employee-contact">${contactLinks(d)}</div></div></div></section>`;
   if (page.type === 'guides') return `<section class="section guides-overview"><h1>Guider og tips</h1><p class="guide-intro">Fakta om belysning, sikringsskap, elkontroll og elbillading.</p><div class="guide-grid">${guideCards(content.guides)}</div></section>`;
-  if (page.type === 'guide' || page.type === 'page') return `<article class="section guide-page"><p><a class="employee-back" href="${page.type==='guide'?'/guider':'/'}">← ${page.type==='guide'?'Tilbake til guider':'Til forsiden'}</a></p><h1>${escapeHtml(d.title)}</h1><p class="guide-intro">${escapeHtml(d.intro)}</p>${picture(d,'guide-hero-image')}${page.type==='guide'?guideTable(d):''}<div class="cms-rich-text">${portableText(d.body)}</div>${page.type==='guide'?enquiry(content):''}</article>`;
+  if (page.type === 'guide' || page.type === 'page') return `<article class="section guide-page"><p><a class="employee-back" href="${page.type==='guide'?'/guider':'/'}">← ${page.type==='guide'?'Tilbake til guider':'Til forsiden'}</a></p><h1>${escapeHtml(d.title)}</h1><p class="guide-intro">${escapeHtml(d.intro)}</p>${picture(d,'guide-hero-image')}${page.type==='guide'?guideTable(d):''}<div class="cms-rich-text">${portableText(d.body)}</div></article>`;
   if (page.type === 'services') return `<section class="section"><h1>Våre tjenester</h1><p>Tysvær Elektro utfører elektriske installasjoner, service og vedlikehold for privat- og bedriftskunder.</p><h2 class="cms-services-heading">Noe av det vi gjør:</h2>${content.services.map((s,i)=>`<div class="service-row${i%2?' reverse':''}"><div class="service-image"><a class="service-image-link" href="${documentUrl(s)}">${picture(s)}</a></div><div class="service-text"><h3><a class="service-title-link" href="${documentUrl(s)}">${escapeHtml(s.title)}</a></h3><p>${escapeHtml(s.intro)}</p><a class="button service-more" href="${documentUrl(s)}">Les mer</a></div></div>`).join('')}</section>`;
   if (page.type === 'service') return `<section class="section service-detail"><p><a class="employee-back" href="/tjenester">← Tilbake til våre tjenester</a></p><h1>${escapeHtml(d.title)}</h1><p class="service-intro">${escapeHtml(d.intro)}</p><div class="service-detail-grid"><div class="service-detail-image">${picture(d)}</div><div class="service-detail-copy cms-rich-text">${portableText(d.body)}</div></div><div class="service-enquiry"><h2>Ta kontakt med oss</h2><p>Fortell oss hva du trenger hjelp med, så avtaler vi videre oppfølging.</p><a class="button" href="/kontakt">Kontakt oss</a></div></section>`;
   if (page.type === 'jobs') return `<section class="section careers-page"><h1>Ledige stillinger</h1><p class="careers-intro">Vil du bli en del av Tysvær Elektro? Se mulighetene hos oss.</p>${content.jobs.length ? content.jobs.map(j=>`<article class="job-card"><p class="job-location">Hele Haugalandet</p><h2><a href="${documentUrl(j)}">${escapeHtml(j.title)}</a></h2><p>${escapeHtml(j.intro)}</p><a class="button" href="${documentUrl(j)}">Les stillingsannonsen</a></article>`).join('') : '<p>Vi har ingen utlyste stillinger akkurat nå.</p>'}</section>`;
@@ -111,7 +115,6 @@ export function mainContent(page, content) {
   }
   return null;
 }
-function enquiry(content) { const email = content.settings.email || 'post@tysverelektro.no';return `<div class="guide-enquiry"><h2>Spørsmål om ditt anlegg?</h2><p>Ta kontakt på <a href="${escapeHtml(safeLink('mailto:'+email))}">${escapeHtml(email)}</a> for en konkret vurdering.</p></div>`; }
 export function createRewriter(page, content, Rewriter = HTMLRewriter) {
   const setHtml = html => ({element(element){element.setInnerContent(html,{html:true});}});
   const setText = text => ({element(element){element.setInnerContent(String(text ?? ''));}});

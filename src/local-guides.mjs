@@ -60,7 +60,7 @@ const guides = [
         "children": [
           {
             "_type": "span",
-            "text": "Dette kan du fortelle elektrikeren. Noter om feilen oppstod da et bestemt apparat ble tatt i bruk, om flere apparater var i gang, og om problemet gjentar seg. Bilder av kursfortegnelsen og synlige bryterstillinger kan være nyttige. Ikke fjern deksler eller berør deler inne i skapet."
+            "text": "Hva er nyttig å notere?. Noter om feilen oppstod da et bestemt apparat ble tatt i bruk, om flere apparater var i gang, og om problemet gjentar seg. Bilder av kursfortegnelsen og synlige bryterstillinger kan være nyttige. Ikke fjern deksler eller berør deler inne i skapet."
           }
         ]
       },
@@ -121,7 +121,7 @@ const guides = [
         "children": [
           {
             "_type": "span",
-            "text": "Dette kan du sende oss. Send en kort beskrivelse, adressen, bilder og gjerne en enkel plantegning. Skill mellom det du må ha, og ønsker som kan vurderes etter budsjett. Vi kan deretter avtale om det er behov for befaring."
+            "text": "Lag en oversikt over behovene. Lag en liste over hva som skal endres, og skill mellom nødvendige behov og valgfrie ønsker. En enkel plantegning med møbler og utstyr kan gjøre det lettere å se hvor lys, betjening og stikkontakter vil være nyttige."
           }
         ]
       }
@@ -155,7 +155,7 @@ const guides = [
         "children": [
           {
             "_type": "span",
-            "text": "Lamper er ikke alltid en enkel utskifting. DSB tillater enkelte arbeider på løse lamper og lamper som henger i takkrok og ikke inngår i den faste installasjonen. En fast tilkoblet lampe eller et downlightanlegg må derfor ikke behandles som om det var en vanlig lampe med støpsel. Spør oss hvis du er usikker."
+            "text": "Lamper er ikke alltid en enkel utskifting. DSB tillater enkelte arbeider på løse lamper og lamper som henger i takkrok og ikke inngår i den faste installasjonen. En fast tilkoblet lampe eller et downlightanlegg må derfor ikke behandles som om det var en vanlig lampe med støpsel. Er du usikker på om arbeidet er tillatt som egeninnsats, sjekk DSBs veiledning før du starter."
           }
         ]
       },
@@ -173,7 +173,7 @@ const guides = [
         "children": [
           {
             "_type": "span",
-            "text": "Er du usikker, la være. Dette er en oversikt, ikke en koblingsveiledning eller en fullstendig liste over unntak. Ikke åpne eller endre elektrisk utstyr når du er usikker på hva som er tillatt eller hvordan det gjøres sikkert. Ta kontakt før du starter."
+            "text": "Er du usikker, la være. Dette er en oversikt, ikke en koblingsveiledning eller en fullstendig liste over unntak. Ikke åpne eller endre elektrisk utstyr når du er usikker på hva som er tillatt eller hvordan det gjøres sikkert. Avklar hva som er tillatt før du starter."
           }
         ]
       }
@@ -225,7 +225,7 @@ const guides = [
         "children": [
           {
             "_type": "span",
-            "text": "Trenger du skjøteledning hver dag?. Hvis en skjøteledning blir stående som en permanent løsning, bør behovet for flere fastmonterte stikkontakter vurderes. Vi kan se på plassering og kapasitet, slik at anlegget passer bedre til bruken din."
+            "text": "Trenger du skjøteledning hver dag?. Hvis en skjøteledning blir stående som en permanent løsning, bør behovet for flere fastmonterte stikkontakter vurderes. Plassering og kapasitet bør vurderes ut fra hvordan rommet faktisk brukes."
           }
         ]
       }
@@ -268,7 +268,7 @@ const guides = [
         "children": [
           {
             "_type": "span",
-            "text": "Noter når problemet oppstår. Flimrer lyset bare når det er dimmet langt ned, ved oppstart eller også på fullt lys? Begynte det etter at du byttet pærer? Noter modellnavn og ta gjerne en kort video. Det hjelper oss å undersøke kombinasjonen."
+            "text": "Noter når problemet oppstår. Flimrer lyset bare når det er dimmet langt ned, ved oppstart eller også på fullt lys? Begynte det etter at du byttet pærer? Noter modellnavn og ta gjerne en kort video. Opplysningene gjør det enklere å forstå når og hvordan problemet oppstår."
           }
         ]
       },
@@ -277,7 +277,7 @@ const guides = [
         "children": [
           {
             "_type": "span",
-            "text": "La fastmontert utstyr bli undersøkt. Ikke demonter en fastmontert dimmer eller driver for å prøve deg frem. Ta kontakt for vurdering av lyskilde, belastning, innstillinger og dimmertype. Brent lukt eller unormal varme skal undersøkes, ikke avskrives som vanlig LED-flimring."
+            "text": "La fastmontert utstyr bli undersøkt. Ikke demonter en fastmontert dimmer eller driver for å prøve deg frem. Ved feil på fastmontert utstyr bør en registrert elektrovirksomhet vurdere lyskilde, belastning, innstillinger og dimmertype. Brent lukt eller unormal varme skal undersøkes, ikke avskrives som vanlig LED-flimring."
           }
         ]
       }
@@ -320,7 +320,7 @@ const guides = [
         "children": [
           {
             "_type": "span",
-            "text": "Montering avhenger av tilkoblingen. Det finnes både løsninger med støpsel og løsninger for fast tilkobling. DSB opplyser at støpseltilkoblede modeller kan monteres av brukeren etter anvisningen. Fast tilkobling må utføres av elektriker. Vi kan vurdere hva som passer hos deg."
+            "text": "Montering avhenger av tilkoblingen. Det finnes både løsninger med støpsel og løsninger for fast tilkobling. DSB opplyser at støpseltilkoblede modeller kan monteres av brukeren etter anvisningen. Fast tilkobling må utføres av elektriker. Velg løsning etter tilkoblingstype og produsentens monteringsanvisning."
           }
         ]
       },
@@ -354,7 +354,7 @@ const guides = [
         "children": [
           {
             "_type": "span",
-            "text": "Start med inngang og gangveier. Tenk gjennom hvor det er nyttig å se trinn, lås, husnummer og veien mellom bolig og parkering. Prioriter disse områdene før du velger dekorativ belysning. Ta gjerne bilder av området og marker hvor du ønsker lys."
+            "text": "Start med inngang og gangveier. Tenk gjennom hvor det er nyttig å se trinn, lås, husnummer og veien mellom bolig og parkering. Prioriter disse områdene før du velger dekorativ belysning. Vurder hva du trenger å se, og hvordan lyset kan plasseres uten å blende."
           }
         ]
       },
