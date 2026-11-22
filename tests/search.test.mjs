@@ -17,8 +17,8 @@ test('Bare publisert innhold blir søkbart',()=>{assert(!index.some(d=>d.title.i
 test('Ingen treff viser kontaktlenke og søketekst escapes',()=>{
  const html=searchPage(content,'<script>alert(1)</script>');assert(!html.includes('<script>'));assert(html.includes('&lt;script&gt;'));assert(html.includes('Fant du ikke'));assert(html.includes('href="/kontakt"'));
 });
-test('Søkeikon følger Kontakt oss i navigasjonen',()=>{
- const html=navigation(content);assert.match(html,/Kontakt oss<\/a><details class="site-search"/);
+test('Søkeikon følger Kontakt i navigasjonen',()=>{
+ const html=navigation(content);assert.match(html,/Kontakt<\/a><details class="site-search"/);
 });
 test('Søket er en utvidbar del av headeren uten dialog eller modal',async()=>{
  const {searchLink}=await import('../src/search-ui.mjs');
