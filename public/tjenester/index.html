@@ -27,7 +27,7 @@
 
             <nav>
                 <a href="/">Hjem</a>
-                <details class="services-menu"><summary>Tjenester <span class="services-chevron" aria-hidden="true">⌄</span></summary><div class="services-submenu"><div class="services-group"><a class="services-overview-link" href="/tjenester">Alle tjenester</a><ul class="services-group-list"><li><a href="/tjenester/elektriske-installasjoner">Elektriske installasjoner</a></li><li><a href="/tjenester/elbillader">Elbillader</a></li><li><a href="/tjenester/feilsoking">Feilsøking</a></li><li><a href="/tjenester/elkontroll">Elkontroll</a></li></ul></div><div class="services-resource-links"><a href="/guider">Guider og tips</a><a href="/tjenester/vanlige-sporsmal">Vanlige spørsmål</a></div></div></details>
+                <details class="services-menu"><summary>Tjenester <span class="services-chevron" aria-hidden="true">⌄</span></summary><div class="services-submenu"><details class="services-group"><summary class="services-group-summary"><a class="services-overview-link" href="/tjenester">Alle tjenester</a><span class="services-group-arrow" aria-hidden="true">⌄</span></summary><ul class="services-group-list"><li><a href="/tjenester/elektriske-installasjoner">Elektriske installasjoner</a></li><li><a href="/tjenester/elbillader">Elbillader</a></li><li><a href="/tjenester/feilsoking">Feilsøking</a></li><li><a href="/tjenester/elkontroll">Elkontroll</a></li></ul></details><div class="services-resource-links"><a href="/guider">Guider og tips</a><a href="/tjenester/vanlige-sporsmal">Vanlige spørsmål</a></div></div></details>
                 <details class="services-menu about-menu">
                     <summary>Om oss <span class="services-chevron" aria-hidden="true">⌄</span></summary>
                     <div class="services-submenu">
@@ -210,7 +210,7 @@
             });
             dropdown.addEventListener("focusout", function () {
                 requestAnimationFrame(function () {
-                    if (!dropdown.contains(document.activeElement)) dropdown.open = false;
+                    if (window.innerWidth > 700 && !dropdown.contains(document.activeElement)) dropdown.open = false;
                 });
             });
         });
