@@ -61,6 +61,7 @@ export default {
       return withHeaders(response,{'Cache-Control':url.pathname.includes('/static/')?'public, max-age=3600':'no-store','X-Robots-Tag':'noindex, nofollow'});
     }
     if(/\.(css|js|mjs|json|svg|png|jpe?g|webp|gif|ico|woff2?|ttf|map)$/i.test(url.pathname) || url.pathname.startsWith('/images/')) return env.ASSETS.fetch(request);
+    if(/^\/tjenester\/vanlige-sporsmal(?:\/(?:index\.html)?)?$/.test(url.pathname)) return Response.redirect(`${url.origin}/vanlige-sporsmal${url.search}`,301);
     const canonical = url.pathname.replace(/\/index\.html$/, '').replace(/\/+$/,'') || '/';
     if(canonical !== url.pathname) return Response.redirect(`${url.origin}${canonical}${url.search}`,301);
     let content;
