@@ -174,12 +174,8 @@
                     Skjoldastraumsvegen 1065<br>
                     5567 Skjoldastraumen
                 </p>
-                <div class="map-privacy-choice">
-                    <p>Kartet leveres av Google. Velger du «Vis Google Maps», kobles nettleseren til Google, som mottar IP-adressen din og kan bruke informasjonskapsler. <a href="/personvern">Les om personvern</a>.</p>
-                    <button class="button map-show" type="button">Vis Google Maps</button>
-                    <button class="button map-hide" type="button" hidden>Lukk kart</button>
-                    <iframe hidden
-                    data-map-src="https://maps.google.com/maps?q=Tysv%C3%A6r%20Elektro%20AS%2C%20Skjoldastraumen%2C%20Norway&amp;z=15&amp;output=embed&amp;hl=no"
+                <iframe
+                    src="https://maps.google.com/maps?q=Tysv%C3%A6r%20Elektro%20AS%2C%20Skjoldastraumen%2C%20Norway&amp;z=15&amp;output=embed&amp;hl=no"
                     title="Google Maps – Tysvær Elektro AS i Skjoldastraumen"
                     width="800"
                     height="400"
@@ -187,7 +183,6 @@
                     referrerpolicy="no-referrer-when-downgrade"
                     allowfullscreen>
                 </iframe>
-                </div>
                 <p>
                     <a href="https://www.google.com/maps/search/?api=1&amp;query=Tysv%C3%A6r%20Elektro%20AS%2C%20Skjoldastraumen%2C%20Norway" target="_blank" rel="noopener noreferrer">Åpne Tysvær Elektro AS i Google Maps (ny fane)</a>
                 </p>
@@ -307,27 +302,6 @@
         });
     </script>
 
-<script>
-        document.querySelectorAll('.map-privacy-choice').forEach(function (box) {
-            const frame = box.querySelector('iframe');
-            const show = box.querySelector('.map-show');
-            const hide = box.querySelector('.map-hide');
-            show.addEventListener('click', function () {
-                frame.src = frame.dataset.mapSrc;
-                frame.hidden = false;
-                show.hidden = true;
-                hide.hidden = false;
-                hide.focus();
-            });
-            hide.addEventListener('click', function () {
-                frame.removeAttribute('src');
-                frame.hidden = true;
-                show.hidden = false;
-                hide.hidden = true;
-                show.focus();
-            });
-        });
-    </script>
 </body>
 
 </html>

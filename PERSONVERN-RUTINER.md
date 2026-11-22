@@ -15,7 +15,7 @@ Forklaring til teksten:
 - Formål og behandlingsgrunnlag: hva data brukes til og hvorfor det er lovlig.
 - Lagringstid: når data slettes. En tekst alene innfører ingen automatisk sletterutine i e-post.
 - Leverandører og utland: hvem som behandler data, og hvor kunden finner informasjon om garantier.
-- Kartvalg: ingen forespørsel til Google Maps før kunden velger kartet; valget lagres ikke. Lukk kart stopper innbyggingen, men sletter ikke eventuelle Google-cookies.
+- Kartet er tilbakeført til automatisk innlasting etter brukerens ønske. Kartets faktiske bruk av informasjonskapsler og overføring av personopplysninger må vurderes før lansering; personverntekst alene erstatter ikke eventuelt nødvendig samtykke.
 - Rettigheter: hvordan kunden ber om innsyn, retting mv., og klager.
 
 Teksten bygger på oversikt over kode og opplysninger gitt i chatten, ikke en revisjon av leverandørkontoer eller bedriftens interne rutiner.
