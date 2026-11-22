@@ -1469,3 +1469,12 @@ footer .social-links {
 .faq-answer { padding: 0 20px 20px; line-height: 1.7; }
 .faq-answer p { margin: 0; }
 .faq-answer a { color: #a92520; text-underline-offset: 3px; }
+
+/* Forside: mindre luft mellom guidekarusellen og ikonoversikten. */
+.guide-carousel { padding-bottom: 40px; }
+.guide-carousel + .home-expertise { padding-top: 40px; }
+.home-expertise > .expertise-group:first-child { margin-top: 16px; }
+@media (max-width: 700px) {
+    .guide-carousel { padding-bottom: 32px; }
+    .guide-carousel + .home-expertise { padding-top: 32px; }
+}
