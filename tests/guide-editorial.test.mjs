@@ -2,14 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {groupContent,mainContent} from '../src/render.mjs';
-test('Alle 14 guideartikler er uten kontaktbokser og oppfordringer til å sende oss noe',async()=>{
+test('Guidene er uten generelle salgsbokser; jordfeilguiden har avtalt kontaktlenke ved behov',async()=>{
  const root=new URL('../public/guider/',import.meta.url);
  let count=0;
  for(const entry of await fs.readdir(root,{withFileTypes:true})){
   if(!entry.isDirectory())continue;
   const html=await fs.readFile(new URL(entry.name+'/index.html',root),'utf8');
   const main=html.match(/<main>([\s\S]*?)<\/main>/)[1];
-  assert(!/guide-enquiry|href="\/kontakt"|mailto:post@|send oss|spør oss|hos oss/i.test(main),entry.name);
+  assert(!/guide-enquiry|mailto:post@|send oss|spør oss|hos oss/i.test(main),entry.name);
+  if(entry.name==='sikringen-gar') assert(main.includes('href="/kontakt"'));
+  else assert(!main.includes('href="/kontakt"'),entry.name);
   count++;
  }
  assert.equal(count,14);

@@ -11,3 +11,5 @@ SG Armaturen – Sensorer: https://www.sg-as.com/no/no/support/verktoey/sensor
 Oppussings- og uteplanleggingen inneholder forslag til behovsavklaring, ikke detaljerte installasjonskrav. Ingen koblingsanvisninger eller generelle løfter om teknisk egnethet er gitt.
 Guidene er lokale sider med metadata i src/local-guides.mjs. En publisert Sanity-guide med samme slug overtar; disse nye sidene er ikke importert til Sanity ennå.
 Prioriteten følger vanlige kundebehov, ikke dokumenterte søketall. Endres i sortGuides i samme fil. Den overstyrer foreløpig Sanitys order-felt for de navngitte guidene.
+
+Utvidet jordfeilguide: Elvias https://www.elvia.no/elsikkerhet/elsikkerhet-i-hjemmet/slik-kan-du-lokalisere-apparater-med-jordfeil/ og Cenikas brukerveiledning https://www.cenika.no/files/documents/produktark/klistremerke.pdf . Kontaktlenken ved feil er lagt til etter uttrykkelig ønske.

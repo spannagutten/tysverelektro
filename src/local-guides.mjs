@@ -42,34 +42,7 @@ const guides = [
         "children": [
           {
             "_type": "span",
-            "text": "Start med å se hva som har mistet strømmen. Er det én kurs, hele boligen eller også naboene som er uten strøm? Se etter driftsmeldinger fra nettselskapet hvis området er rammet. Noter hvilken kurs eller hvilket vern som har koblet ut."
-          }
-        ]
-      },
-      {
-        "_type": "block",
-        "children": [
-          {
-            "_type": "span",
-            "text": "Flere mulige årsaker. En sikring kan koble ut når belastningen blir for stor. Jordfeilvern reagerer på strøm på avveie. Vern kan også koble ut ved andre feil. Utkoblingen alene forteller ikke sikkert hva årsaken er."
-          }
-        ]
-      },
-      {
-        "_type": "block",
-        "children": [
-          {
-            "_type": "span",
-            "text": "Hva er nyttig å notere?. Noter om feilen oppstod da et bestemt apparat ble tatt i bruk, om flere apparater var i gang, og om problemet gjentar seg. Bilder av kursfortegnelsen og synlige bryterstillinger kan være nyttige. Ikke fjern deksler eller berør deler inne i skapet."
-          }
-        ]
-      },
-      {
-        "_type": "block",
-        "children": [
-          {
-            "_type": "span",
-            "text": "Når bør du stoppe?. Ikke forsøk å tvinge et vern på eller koble det inn igjen gjentatte ganger. Brent lukt, knitring, misfarging eller unormal varme skal undersøkes av elektriker. Ved røyk eller brann: kom deg i sikkerhet og ring 110."
+            "text": "← Tilbake til guider\nSikringen går – hva gjør jeg?Når strømmen blir borte, er det nyttig å skille mellom overbelastning, jordfeil og strømbrudd.\nStart med å se hva som har mistet strømmen\nEr det én kurs, hele boligen eller også naboene som er uten strøm? Se etter driftsmeldinger fra nettselskapet hvis området er rammet. Noter hvilken kurs eller hvilket vern som har koblet ut.\nFlere mulige årsaker\nEn sikring kan koble ut når belastningen blir for stor. Jordfeilvern reagerer på strøm på avveie. Vern kan også koble ut ved andre feil. Utkoblingen alene forteller ikke sikkert hva årsaken er.\nHva er nyttig å notere?\nNoter om feilen oppstod da et bestemt apparat ble tatt i bruk, om flere apparater var i gang, og om problemet gjentar seg. Bilder av kursfortegnelsen og synlige bryterstillinger kan være nyttige. Ikke fjern deksler eller berør deler inne i skapet.\nJordfeilbryter eller jordfeilautomat?\n\nEn felles jordfeilbryter beskytter flere kurser og kan slå ut strømmen i hele boligen. En jordfeilautomat kombinerer sikring og jordfeilvern for én kurs. En jordfeilautomat kan også løse ut ved overbelastning eller kortslutning; utkobling betyr derfor ikke alltid jordfeil.\n\nFør du begynner: Bruk bare bryterhendlene som er beregnet for vanlig betjening, og følg veiledningen i sikringsskapet. Ikke fjern deksler, åpne koblingsbokser eller løsne ledninger. Er du usikker på hvilke vern du har, eller skapet eller utstyret er vått, skadet, unormalt varmt eller lukter brent, skal du stoppe og kontakte elektriker. Ikke ta på utstyr som har gitt støt.\n\nFelles jordfeilbryter: finn hvilken kurs som utløser vernet\n\n\nSlå av kurssikringene som den felles jordfeilbryteren beskytter. La hovedsikringen stå på.\n\nForsøk å slå på jordfeilbryteren etter produsentens anvisning. Lar den seg ikke slå på med kursene avslått, skal du stoppe og kontakte elektriker.\n\nSlå på én kurs om gangen. Hvis jordfeilbryteren løser ut, noter hvilken kurs du nettopp slo på. Den kursen må undersøkes nærmere.\n\nSlå den aktuelle kursen av igjen og la den stå av. Slå på jordfeilbryteren, og koble inn de øvrige kursene én om gangen. Da kan de andre kursene få strøm igjen dersom vernet blir stående inne.\n\n\nIkke prøv den samme feilende kursen igjen og igjen. Dersom vernet også løser ut med den mistenkte kursen avslått, eller det er uklart hva som skjer, stopp og få hjelp. Det kan være mer enn én feil.\n\nJordfeilautomat: undersøk apparatene på den aktuelle kursen\n\n\nLa den utløste kursen stå av mens du kobler fra løse apparater. Bruk kursfortegnelsen til å finne hvilke uttak og rom den forsyner.\n\nTrekk ut støpslene til tilgjengelige, uskadde apparater på kursen, og koble fra skjøteledninger. Husk også utstyr med støpsel i garasje og utekontakter, for eksempel flyttbar utebelysning. Ikke berør vått eller skadet utstyr.\n\nSlå av vanlig betjening for fast tilkoblet utstyr på kursen, men ikke løsne ledninger eller fast tilkobling. En lysbryter er ikke nødvendigvis en fullstendig frakobling.\n\nForsøk å koble inn jordfeilautomaten etter anvisningen. Løser den ut igjen uten de løse apparatene tilkoblet, la kursen være av og kontakt elektriker.\n\nBlir vernet stående inne, kan uskadde og tørre apparater kobles til og slås på ett om gangen. Dersom vernet løser ut ved et apparat, stopp der. La kursen være av mens støpselet til det mistenkte apparatet trekkes ut, og ikke bruk apparatet før det er kontrollert eller reparert.\n\n\nSamme fremgangsmåte for løse apparater kan brukes når en felles jordfeilbryter har pekt ut en bestemt kurs. Når mistenkt utstyr er frakoblet, kan kursen forsøkes koblet inn én gang. Holder ikke vernet seg inne, la kursen stå av.\n\nHva med fastmontert utebelysning og andre faste installasjoner?\n\nFeilen kan ligge i et apparat, men også i fastmontert belysning, varmekabler eller den faste installasjonen. Ikke koble fra slikt utstyr selv. At vernet blir stående inne etter at noe er slått av, er heller ikke en sikker bekreftelse på at feilen er funnet. Jordfeil kan komme og gå, blant annet ved fukt eller når utstyr kobler inn.\n\nNår skal du kontakte oss?\n\nHar du funnet en mistenkt feil som krever elektriker, får du ikke strømmen tilbake, eller finner du ikke årsaken? Kontakt oss for feilsøking og utbedring. La den berørte kursen eller det mistenkte apparatet være frakoblet frem til det er avklart at det kan brukes trygt.\n\nNår bør du stoppe?\nIkke forsøk å tvinge et vern på eller koble det inn igjen gjentatte ganger. Brent lukt, knitring, misfarging eller unormal varme skal undersøkes av elektriker. Ved røyk eller brann: kom deg i sikkerhet og ring 110.\n"
           }
         ]
       }
