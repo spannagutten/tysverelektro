@@ -1,0 +1,13 @@
+Nye guider kontrollert 22.11.2026.
+DSB – Hva kan du gjøre selv: https://www.dsb.no/sikkerhverdag/strom/elektrisk-arbeid-dette-kan-du-gjore-selv/
+DSB – Sikringsskap: https://www.dsb.no/sikkerhverdag/strom/slik-sjekker-du-sikringsskapet/
+Elvia – Jordfeilbryter: https://www.elvia.no/elsikkerhet/elsikkerhet-i-hjemmet/jordfeilbryteren-slar-ut--hva-gjor-jeg/
+DSB – Skjøteledninger: https://www.dsb.no/sikkerhverdag/strom/riktig-bruk-av-skjoteledning/
+DSB – Komfyrvakt: https://www.dsb.no/sikkerhverdag/brann/dette-bor-du-vite-om-komfyrvakt/
+ELKO – Dimmerfeilsøking: https://proff.elko.no/elko-smart/ELKO%20Smart%20System%20User%20Guide/Norwegian/ELKO%20Smart%20System%20User%20Guide%20(BOOKMAP)_no_0000436249_files/DimmertroubleshootingREF_no_0000436191.html
+ELKO – SmartDim: https://www.elko.no/produkter/45-elko-smart-styringssystemer/smartdim/
+SG Armaturen – Sensorer: https://www.sg-as.com/no/no/support/verktoey/sensor
+
+Oppussings- og uteplanleggingen inneholder forslag til behovsavklaring, ikke detaljerte installasjonskrav. Ingen koblingsanvisninger eller generelle løfter om teknisk egnethet er gitt.
+Guidene er lokale sider med metadata i src/local-guides.mjs. En publisert Sanity-guide med samme slug overtar; disse nye sidene er ikke importert til Sanity ennå.
+Prioriteten følger vanlige kundebehov, ikke dokumenterte søketall. Endres i sortGuides i samme fil. Den overstyrer foreløpig Sanitys order-felt for de navngitte guidene.

@@ -1,3 +1,4 @@
+import {localGuidePaths,localGuideImages,sortGuides} from './local-guides.mjs';
 import {searchLink} from './search-ui.mjs';
 // HTML generated from published Sanity content. Never interpolate unescaped editor input.
 export const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
@@ -7,7 +8,7 @@ export function safeLink(value, fallback = '#') {
   return /^(https?:\/\/[^\s]+|mailto:[^\s]+|tel:[+\d ()-]+|\/(?!\/)[^\s]*|#[\w-]+)$/i.test(s) ? s : fallback;
 }
 export function imageUrl(image, fallback = '/images/guider/guider-og-tips.svg') {
-  if(image?.localPath === '/images/guider/ip-grad.svg') return image.localPath;
+  if(localGuideImages.has(image?.localPath)) return image.localPath;
   const url = image?.url;
   if (typeof url === 'string' && /^https:\/\/cdn\.sanity\.io\/images\/89cnbpsm\/production\/[\w.-]+$/.test(url)) return url + '?w=1200&fit=max&auto=format';
   const ref = image?.asset?._ref;
@@ -46,7 +47,7 @@ export function groupContent(documents) {
   const settings = {...(docs.find(d => d._type === 'siteSettings') || {})};
   // Keep the retired switchboard number out of the website, including older CMS settings.
   if (['52779239','4752779239'].includes(String(settings.phone || '').replace(/[^0-9]/g,''))) settings.phone = '934 97 622';
-  return {docs, home: docs.find(d => d._type === 'home'), settings, employees: docs.filter(d => d._type === 'employee' && slugOf(d)), guides: docs.filter(d => d._type === 'guide' && slugOf(d)), services: docs.filter(d => d._type === 'service' && slugOf(d)), jobs: docs.filter(d => d._type === 'job' && slugOf(d)), pages: docs.filter(d => d._type === 'page' && slugOf(d))};
+  return {docs, home: docs.find(d => d._type === 'home'), settings, employees: docs.filter(d => d._type === 'employee' && slugOf(d)), guides: sortGuides(docs.filter(d => d._type === 'guide' && slugOf(d))), services: docs.filter(d => d._type === 'service' && slugOf(d)), jobs: docs.filter(d => d._type === 'job' && slugOf(d)), pages: docs.filter(d => d._type === 'page' && slugOf(d))};
 }
 function contactLinks(person) {
   const links = [];
@@ -74,7 +75,7 @@ export function pageFor(pathname, content) {
     if (path.startsWith(prefix + '/')) {
       const slug = path.slice(prefix.length + 1);
       const doc = content.docs.find(d=>d._type===type && slugOf(d)===slug);
-      if(doc?._localTemplate==='/guider/ip-grad') return {doc,path,type:'static',template:doc._localTemplate};
+      if(localGuidePaths.has(doc?._localTemplate)) return {doc,path,type:'static',template:doc._localTemplate};
       return doc ? {doc, path, type, template: type==='employee' ? '/om-oss/erik.erland' : type==='guide' || type==='page' ? '/guider/sikringsskap' : type==='service' ? '/tjenester/elkontroll' : '/ledige-stillinger/elektriker'} : {notFound:true};
     }
   }
