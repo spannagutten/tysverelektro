@@ -1457,3 +1457,15 @@ footer .social-links {
 .guide-carousel-arrow svg { width: 26px; height: 30px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 .guide-carousel-prev { left: 4px; }
 .guide-carousel-next { right: 4px; }
+
+/* Vanlige spørsmål: tydelige spørsmål og utvidbare svar. */
+.faq-page { max-width: 1000px; margin-inline: auto; }
+.faq-answers { margin-block: 28px; }
+.faq-item { margin-bottom: 14px; background: #F5F3F0; border: 1px solid #d8d0c9; border-radius: 8px; }
+.faq-item > summary { padding: 20px; font-size: 19px; font-weight: bold; cursor: pointer; }
+.faq-item > summary::marker { color: #CB322C; }
+.faq-item > summary:hover { color: #a92520; }
+.faq-item > summary:focus-visible { outline: 3px solid #CB322C; outline-offset: 3px; border-radius: 8px; }
+.faq-answer { padding: 0 20px 20px; line-height: 1.7; }
+.faq-answer p { margin: 0; }
+.faq-answer a { color: #a92520; text-underline-offset: 3px; }

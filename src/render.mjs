@@ -63,10 +63,11 @@ export function navigation(content) {
   const link = (label, url) => `<a href="${escapeHtml(safeLink(url))}">${escapeHtml(label)}</a>` + (url === "/kontakt" ? searchLink : "");
   const menu = (label, children, about = false) => `<details class="services-menu${about ? ' about-menu' : ''}"><summary>${escapeHtml(label)} <span class="services-chevron" aria-hidden="true">⌄</span></summary><div class="services-submenu">${children}</div></details>`;
   if (Array.isArray(content.settings.navigation) && content.settings.navigation.length) return content.settings.navigation.map(item => item.children?.length ? menu(item.title, item.children.map(i => link(i.title, i.url)).join('')) : link(item.title, item.url)).join('');
-  return link('Hjem','/') + menu('Våre tjenester',link('Alle tjenester','/tjenester') + content.services.map(d=>link(d.title,documentUrl(d))).join('') + '<a class="guides-menu-link" href="/guider">Guider og tips</a>') + menu('Om oss',link('Om Tysvær Elektro','/om-oss') + link('Våre ansatte','/om-oss#ansatte') + link('Her finner du oss','/om-oss#hvor-vi-er'),true) + link('Ledige stillinger','/ledige-stillinger') + link('Kontakt oss','/kontakt') + (content.pages.length ? menu('Mer', content.pages.map(d=>link(d.title,documentUrl(d))).join('')) : '');
+  return link('Hjem','/') + menu('Våre tjenester',link('Alle tjenester','/tjenester') + content.services.map(d=>link(d.title,documentUrl(d))).join('') + '<a class="guides-menu-link" href="/guider">Guider og tips</a>' + link('Vanlige spørsmål','/tjenester/vanlige-sporsmal')) + menu('Om oss',link('Om Tysvær Elektro','/om-oss') + link('Våre ansatte','/om-oss#ansatte') + link('Her finner du oss','/om-oss#hvor-vi-er'),true) + link('Ledige stillinger','/ledige-stillinger') + link('Kontakt oss','/kontakt') + (content.pages.length ? menu('Mer', content.pages.map(d=>link(d.title,documentUrl(d))).join('')) : '');
 }
 export function pageFor(pathname, content) {
   const path = pathname.replace(/\/index\.html$/, '').replace(/\/$/,'') || '/';
+  if(path==='/tjenester/vanlige-sporsmal') return {path,type:'static',template:path};
   for (const [type, prefix] of Object.entries(base)) {
     if (path.startsWith(prefix + '/')) {
       const slug = path.slice(prefix.length + 1);
