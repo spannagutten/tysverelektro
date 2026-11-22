@@ -1546,3 +1546,8 @@ html.mobile-menu-open, html.mobile-menu-open body { overflow: hidden; overscroll
 .services-submenu > a, .services-resource-links > a, .services-group-list > li > a, .services-group > .services-group-summary { border-bottom: 1px solid #4A4A4A; }
 .services-submenu .services-overview-link { border-bottom: 0; }
 .services-submenu a:hover { border-bottom-color: #4A4A4A; }
+
+/* IP-guide: korte forklaringer til vanlige grader. */
+.ip-examples dt { font-weight:700; margin-top:18px; }
+.ip-examples dd { margin:4px 0 0; max-width:75ch; }
+.ip-guide figure img { display:block; width:100%; height:auto; }

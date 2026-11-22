@@ -1,3 +1,4 @@
+import {withLocalGuides} from './local-guides.mjs';
 import {recordSearch,readStatistics,pruneStatistics} from './search-analytics.mjs';
 import {searchIndex, searchPage} from './search.mjs';
 import {groupContent, pageFor, createRewriter} from './render.mjs';
@@ -16,7 +17,7 @@ async function contentFor(env, ctx, requestUrl) {
   if (!/^[a-z0-9]+$/.test(project) || !/^[a-z0-9_-]+$/.test(dataset)) throw new Error('Invalid CMS configuration');
   const key = new Request(`${requestUrl.origin}/__cms-cache/${project}/${dataset}/v1`);
   const cache = caches.default; const hit = await cache.match(key);
-  if(hit) return groupContent(await boundedJson(hit));
+  if(hit) return groupContent(withLocalGuides(await boundedJson(hit)));
   const url = new URL(`https://${project}.apicdn.sanity.io/v2026-11-03/data/query/${dataset}`);
   url.searchParams.set('perspective','published'); url.searchParams.set('query',query);
   const response = await fetch(url, {signal: AbortSignal.timeout(6000), headers:{Accept:'application/json'}});
@@ -25,7 +26,7 @@ async function contentFor(env, ctx, requestUrl) {
   if(json.error || !Array.isArray(json.result) || !json.result.some(d=>d._type==='home')) throw new Error('CMS content unavailable');
   // No token is used. Only published documents can be read by this public endpoint.
   ctx.waitUntil(cache.put(key,new Response(JSON.stringify(json.result),{headers:{'Content-Type':'application/json','Cache-Control':'public, max-age=60'}})));
-  return groupContent(json.result);
+  return groupContent(withLocalGuides(json.result));
 }
 function withHeaders(response, extra={}) {
   const headers = new Headers(response.headers);

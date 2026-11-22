@@ -7,6 +7,7 @@ export function safeLink(value, fallback = '#') {
   return /^(https?:\/\/[^\s]+|mailto:[^\s]+|tel:[+\d ()-]+|\/(?!\/)[^\s]*|#[\w-]+)$/i.test(s) ? s : fallback;
 }
 export function imageUrl(image, fallback = '/images/guider/guider-og-tips.svg') {
+  if(image?.localPath === '/images/guider/ip-grad.svg') return image.localPath;
   const url = image?.url;
   if (typeof url === 'string' && /^https:\/\/cdn\.sanity\.io\/images\/89cnbpsm\/production\/[\w.-]+$/.test(url)) return url + '?w=1200&fit=max&auto=format';
   const ref = image?.asset?._ref;
@@ -73,6 +74,7 @@ export function pageFor(pathname, content) {
     if (path.startsWith(prefix + '/')) {
       const slug = path.slice(prefix.length + 1);
       const doc = content.docs.find(d=>d._type===type && slugOf(d)===slug);
+      if(doc?._localTemplate==='/guider/ip-grad') return {doc,path,type:'static',template:doc._localTemplate};
       return doc ? {doc, path, type, template: type==='employee' ? '/om-oss/erik.erland' : type==='guide' || type==='page' ? '/guider/sikringsskap' : type==='service' ? '/tjenester/elkontroll' : '/ledige-stillinger/elektriker'} : {notFound:true};
     }
   }

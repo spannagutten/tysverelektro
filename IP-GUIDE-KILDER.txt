@@ -1,0 +1,8 @@
+Faggrunnlag for IP-guiden (kontrollert 22.11.2026):
+IEC 60529: standardreferanse, ikke full standardtekst tilgjengelig her.
+Intertek, IP testing: https://www.intertek.com/lighting/performance/ingress-protection/
+Elsäkerhetsverket, IP code: https://www.elsakerhetsverket.se/en/professionals/manufacturers-importers-and-distributors/the-different-product-requirements/other-markings/ip-code/
+SGS, IP ratings technical guide (mai 2025): https://www.sgs.com/-/media/sgscorp/documents/corporate/technical-documents/baseefa-documents/technical-guides-and-wallcharts/atex-certification-and-iecex-certification-of-equipment/bas-ps-017-sgs-cp-baseefa-ip-ratings-brochure-a4-en.cdn.en-GB.1.pdf
+ABB Cable Glands Catalogue, IEC 60529 IP tables: https://library.e.abb.com/public/d90e52a12f294f48a9e0f715ddc708d2/ABB%20CABLE%20GLANDS%20CATALOGUE_LATEST%20AW_June%202019.pdf
+
+Guiden ligger foreløpig i kode, som lokal guide med metadata i src/local-guides.mjs og innhold i public/guider/ip-grad/index.html. Den vises i Sanity-baserte oversikter, forsidekarusell og søk. Den er ikke importert som et redigerbart dokument i Sanity. En senere Sanity-guide med samme adresse vil overta.
