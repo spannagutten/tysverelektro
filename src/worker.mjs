@@ -1,33 +1,9 @@
-import {withLocalGuides} from './local-guides.mjs';
+import {searchLink} from './search-ui.mjs';
+import {staticSearch} from './static-search.mjs';
 import {recordSearch,readStatistics,pruneStatistics} from './search-analytics.mjs';
 import {searchIndex, searchPage} from './search.mjs';
-import {groupContent, pageFor, createRewriter} from './render.mjs';
-const query = '*[_type in ["home","employee","guide","service","job","page","siteSettings"] && !defined(cmsMigrationTarget)] | order(order asc, _id asc) {...,"image":image{...,"url":asset->url},"contact":contact->{name,phone,email},"body":body[]{...,"url":asset->url},"bio":bio[]{...,"url":asset->url}}';
-async function boundedJson(response) {
-  if (Number(response.headers.get('content-length')) > 2000000) throw new Error('CMS response too large');
-  const reader = response.body.getReader(); const chunks = []; let length = 0;
-  try { while (true) { const {done,value} = await reader.read(); if (done) break; length += value.byteLength; if (length > 2000000) { await reader.cancel(); throw new Error('CMS response too large'); } chunks.push(value); } }
-  finally { reader.releaseLock(); }
-  const bytes = new Uint8Array(length); let offset = 0;
-  for(const chunk of chunks){bytes.set(chunk,offset);offset += chunk.byteLength;}
-  return JSON.parse(new TextDecoder().decode(bytes));
-}
-async function contentFor(env, ctx, requestUrl) {
-  const project = env.SANITY_PROJECT_ID || '89cnbpsm'; const dataset = env.SANITY_DATASET || 'production';
-  if (!/^[a-z0-9]+$/.test(project) || !/^[a-z0-9_-]+$/.test(dataset)) throw new Error('Invalid CMS configuration');
-  const key = new Request(`${requestUrl.origin}/__cms-cache/${project}/${dataset}/v1`);
-  const cache = caches.default; const hit = await cache.match(key);
-  if(hit) return groupContent(withLocalGuides(await boundedJson(hit)));
-  const url = new URL(`https://${project}.apicdn.sanity.io/v2026-11-03/data/query/${dataset}`);
-  url.searchParams.set('perspective','published'); url.searchParams.set('query',query);
-  const response = await fetch(url, {signal: AbortSignal.timeout(6000), headers:{Accept:'application/json'}});
-  if(!response.ok) throw new Error(`CMS returned ${response.status}`);
-  const json = await boundedJson(response);
-  if(json.error || !Array.isArray(json.result) || !json.result.some(d=>d._type==='home')) throw new Error('CMS content unavailable');
-  // No token is used. Only published documents can be read by this public endpoint.
-  ctx.waitUntil(cache.put(key,new Response(JSON.stringify(json.result),{headers:{'Content-Type':'application/json','Cache-Control':'public, max-age=60'}})));
-  return groupContent(withLocalGuides(json.result));
-}
+
+const contentFor = () => ({searchEntries: staticSearch});
 function withHeaders(response, extra={}) {
   const headers = new Headers(response.headers);
   for(const [key,value] of Object.entries(extra)) headers.set(key,value);
@@ -65,18 +41,23 @@ export default {
     if(/^\/tjenester\/vanlige-sporsmal(?:\/(?:index\.html)?)?$/.test(url.pathname)) return Response.redirect(`${url.origin}/vanlige-sporsmal${url.search}`,301);
     const canonical = url.pathname.replace(/\/index\.html$/, '').replace(/\/+$/,'') || '/';
     if(canonical !== url.pathname) return Response.redirect(`${url.origin}${canonical}${url.search}`,301);
-    let content;
-    try {content = await contentFor(env,ctx,url);}
-    catch(error) {console.error('CMS read failed',error instanceof Error?error.message:'unknown error');if(canonical==='/sok'||canonical==='/sok/data') return new Response('Søket er midlertidig utilgjengelig. Prøv igjen eller kontakt post@tysverelektro.no.',{status:503,headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'no-store'}});const fallback = await env.ASSETS.fetch(request);if(fallback.status===404) return notFoundResponse(request,env);return withHeaders(fallback,{'X-CMS-Status':'fallback','Cache-Control':'no-cache'});}
-    if(canonical === '/sok/data') return new Response(request.method==='HEAD'?null:JSON.stringify(searchIndex(content)),{headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex','X-Content-Type-Options':'nosniff'}});
-    const searchQuery=(url.searchParams.get('q')||'').trim().slice(0,100);
-    const page = canonical === '/sok' ? {path:canonical,type:'search',template:'/guider',searchHtml:searchPage(content,searchQuery)} : pageFor(canonical,content);
-    if(page.notFound) return notFoundResponse(request, env);
-    const template = await env.ASSETS.fetch(new Request(`${url.origin}${page.template}`));
-    if(template.status===404) return notFoundResponse(request,env);
-    if(!template.ok || !template.headers.get('content-type')?.includes('text/html')) return template;
-    const response = createRewriter(page,content).transform(template);
-    const result = withHeaders(response,{'Cache-Control':'no-store','X-CMS-Status':'published'});
-    return request.method==='HEAD' ? new Response(null,{status:result.status,headers:result.headers}) : result;
+    const content = contentFor();
+    if(canonical === '/sok/data') return new Response(request.method==='HEAD'?null:JSON.stringify(staticSearch),{headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex','X-Content-Type-Options':'nosniff'}});
+    if(canonical === '/sok') {
+      const template = await env.ASSETS.fetch(new Request(`${url.origin}/guider`));
+      const html = searchPage(content,(url.searchParams.get('q')||'').trim().slice(0,100));
+      const response = new HTMLRewriter().on('main',{element(element){element.setInnerContent(html,{html:true});}}).on('title',{element(element){element.setInnerContent('Søk | Tysvær Elektro');}}).on('header nav',{element(e){e.append(searchLink,{html:true});}}).on('head',{element(e){e.append('<link rel="stylesheet" href="/cms.css"><link rel="stylesheet" href="/search.css">',{html:true});}}).on('body',{element(e){e.append('<script type="module" src="/search.js"></script>',{html:true});}}).transform(template);
+      return withHeaders(request.method==='HEAD'?new Response(null,{headers:response.headers}):response,{'Cache-Control':'no-store','X-Robots-Tag':'noindex'});
+    }
+    const response = await env.ASSETS.fetch(request);
+    if(response.status===404) return notFoundResponse(request,env);
+    const decorated = response.headers.get('content-type')?.includes('text/html')
+      ? new HTMLRewriter()
+        .on('header nav',{element(e){e.append(searchLink,{html:true});}})
+        .on('head',{element(e){e.append('<link rel="stylesheet" href="/cms.css"><link rel="stylesheet" href="/search.css">',{html:true});}})
+        .on('body',{element(e){e.append('<script type="module" src="/search.js"></script>',{html:true});}})
+        .transform(response)
+      : response;
+    return withHeaders(decorated,{'Cache-Control':'no-cache'});
   }
 };

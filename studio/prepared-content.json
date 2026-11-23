@@ -1843,12 +1843,12 @@
   {
     "_id": "job-elkontrollor",
     "_type": "job",
-    "title": "Vi søker elkontrollør",
+    "title": "Vi søker elektriker / elkontrollør",
     "slug": {
       "_type": "slug",
       "current": "elkontrollor"
     },
-    "intro": "Er du elektriker med NEK 405-3-sertifisering og ønsker å jobbe med elkontroll på Haugalandet? Tysvær Elektro AS søker en elkontrollør som er grundig, selvstendig og opptatt av elektrisk sikkerhet.",
+    "intro": "Vil du kombinere arbeid som elektriker med elkontroll? Tysvær Elektro AS søker en montør/elektriker og elkontrollør til oppdrag over hele Haugalandet. Vi ønsker helst sertifisering etter NEK 405-3 for næringsbygg, men du er også aktuell dersom du kun har sertifisering for elkontroll av bolig.",
     "body": [
       {
         "_type": "block",
@@ -1967,7 +1967,7 @@
           {
             "_type": "span",
             "_key": "2a7541babb57",
-            "text": "Service og feilsøking ved behov.",
+            "text": "Elektriske installasjoner, service, vedlikehold og feilsøking som en del av den ordinære montørrollen.",
             "marks": []
           }
         ],
@@ -2013,7 +2013,7 @@
           {
             "_type": "span",
             "_key": "717b2f3d8816",
-            "text": "Gyldig personsertifisering etter NEK 405-3.",
+            "text": "Gyldig sertifisering for elkontroll av bolig og/eller næringsbygg. Vi foretrekker NEK 405-3 for næringsbygg, men sertifisering kun for bolig er også aktuelt.",
             "marks": []
           }
         ],
@@ -2139,7 +2139,7 @@
           {
             "_type": "span",
             "_key": "09d66f6e5482",
-            "text": "Erfaring med elkontroll, rapportering og kundedialog er en fordel. Oppgi i søknaden at du har NEK 405-3-sertifisering, og gyldighetstiden for sertifikatet.",
+            "text": "Erfaring med elkontroll, rapportering og kundedialog er en fordel. Fortell i søknaden hvilke sertifiseringer du har, hvilke kontrollområder de dekker og hvor lenge de er gyldige.",
             "marks": []
           }
         ]
@@ -2167,7 +2167,7 @@
           {
             "_type": "span",
             "_key": "ba613d1fc0d9",
-            "text": "Hos oss blir du del av et lite team med nærhet til både kollegaer og kunder. Du vil jobbe med elkontroll og oppfølging av elektriske anlegg hos kunder over hele Haugalandet, og bidra med service og feilsøking ved behov.",
+            "text": "Hos oss blir du del av et lite team med nærhet til både kollegaer og kunder. Stillingen kombinerer vanlige oppdrag som montør/elektriker med elkontroll hos kunder over hele Haugalandet. Kontrolloppgavene tilpasses sertifiseringene dine.",
             "marks": []
           }
         ]

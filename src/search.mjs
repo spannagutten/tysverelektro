@@ -3,6 +3,7 @@ import {searchItems} from '../public/search-core.mjs';
 const labels={service:'Tjeneste',guide:'Guide',employee:'Ansatt',job:'Ledig stilling',page:'Side'};
 const textOf=blocks=>(Array.isArray(blocks)?blocks:[]).flatMap(b=>(b.children||[]).map(s=>s.text||'')).join(' ');
 export function searchIndex(content){
+ if(content.searchEntries) return content.searchEntries;
  const entries=content.docs.filter(d=>labels[d._type]&&documentUrl(d)!=='#').map(d=>({title:d.title||d.name,label:labels[d._type],type:d._type,url:documentUrl(d),summary:String(d.intro||d.role||'').slice(0,260),text:textOf(d.body||d.bio)}));
  entries.push({title:'Vanlige spørsmål',label:'Side',type:'page',url:'/vanlige-sporsmal',summary:'Svar om små og store oppdrag, timebetaling, fastpris, gratis befaring og dokumentasjon i Boligmappa.',text:'elektriker lamper stikkontakter nytt hus pris tilbud befaring kontaktopplysninger eierskifte dokumentasjon'}, {title:'Kontakt oss',label:'Kontakt',type:'contact',url:'/kontakt',summary:'Ta kontakt med Tysvær Elektro.',text:'telefon epost adresse henvendelse kontakt skjema'}, {title:'Om Tysvær Elektro',label:'Om oss',type:'about',url:'/om-oss',summary:content.settings.aboutIntro||'Din lokale elektriker på Haugalandet.',text:[content.settings.serviceArea,content.settings.address,'ansatte Skjoldastraumen'].filter(Boolean).join(' ')});
  return entries;
