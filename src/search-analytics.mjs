@@ -1,6 +1,19 @@
 import {normalize,searchItems} from '../public/search-core.mjs';
 const known={elbil:'elbil',elbillader:'elbillader',elbilladere:'elbillader',lader:'lader',ladere:'lader','elbillader hjemme':'elbillader hjemme',elkontroll:'elkontroll',sikringsskap:'sikringsskap',downlight:'downlights',downlights:'downlights',belysning:'belysning',lys:'lys',varme:'varme',smarthus:'smarthus',feilsoking:'feilsøking',kelvin:'kelvin',fargetemperatur:'fargetemperatur',watt:'watt',lumen:'lumen',lux:'lux',nybygg:'nybygg',industri:'industri',naering:'næring',landbruk:'landbruk',pabygg:'påbygg',jobb:'jobb',elektriker:'elektriker'};
-export const statisticsTerm=query=>{const key=normalize(query).trim().replace(/\s+/g,' ');return Object.hasOwn(known,key)?known[key]:'Andre søk';};
+// A practical spam filter, not a language detector or a guarantee of anonymisation.
+export function statisticsTerm(query){
+ const raw=String(query).trim(),key=normalize(raw).replace(/\s+/g,' ');
+ if(Object.hasOwn(known,key))return known[key];
+ if(key.length<2||key.length>60||!/^[a-zæøå -]+$/.test(key))return null;
+ if(/\b(?:constructor|prototype|proto)\b/.test(key))return null;
+ // Reject contact details, likely full names, addresses with numbers and obvious keyboard spam.
+ if(/^[A-ZÆØÅ][a-zæøå]+(?: [A-ZÆØÅ][a-zæøå]+)+$/.test(raw))return null;
+ const words=key.split(/[ -]+/).filter(Boolean);
+ if(words.length>7)return null;
+ const short=new Set(['i','a','å','og','av','på','til','med','en','et','er','for','om','ny','el','ip','led','usb']);
+ if(words.some(w=>!short.has(w)&&(w.length<2||w.length>24||!/[aeiouyæøå]/.test(w)||/([a-z])\1\1|[aeiouyæøå]{4}|[bcdfghjklmnpqrstvwxz]{5}/.test(w))))return null;
+ return raw.toLocaleLowerCase('nb-NO').replace(/\s+/g,' ');
+}
 export const statisticsDay=(date=new Date())=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Oslo',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
 export const cutoffDay=(days,date=new Date())=>statisticsDay(new Date(date.getTime()-(days-1)*86400000));
 const response=(body,status=200)=>new Response(JSON.stringify(body),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Robots-Tag':'noindex','X-Content-Type-Options':'nosniff'}});
@@ -21,8 +34,9 @@ export async function recordSearch(request,env,getIndex){
   const joined=new Uint8Array(bytes);let offset=0;for(const c of chunks){joined.set(c,offset);offset+=c.byteLength;}
   let data;try{data=JSON.parse(new TextDecoder().decode(joined));}catch{return response({error:'Invalid JSON'},400);}
   if(typeof data.q!=='string'||!data.q.trim()||data.q.length>100)return response({error:'Invalid search'},400);
+  const term=statisticsTerm(data.q);if(!term)return new Response(null,{status:204});
   const index=await getIndex();const missing=searchItems(index,data.q).length===0?1:0;
-  await env.SEARCH_STATS.prepare('INSERT INTO search_daily(day,term,searches,no_results) VALUES(?,?,1,?) ON CONFLICT(day,term) DO UPDATE SET searches=searches+1,no_results=no_results+excluded.no_results').bind(statisticsDay(),statisticsTerm(data.q),missing).run();
+  await env.SEARCH_STATS.prepare('INSERT INTO search_daily(day,term,searches,no_results) VALUES(?,?,1,?) ON CONFLICT(day,term) DO UPDATE SET searches=searches+1,no_results=no_results+excluded.no_results').bind(statisticsDay(),term,missing).run();
   return new Response(null,{status:204});
  }catch{return response({error:'Statistics unavailable'},503);}
 }

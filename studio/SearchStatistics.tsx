@@ -18,7 +18,7 @@ export function SearchStatistics(){
   <p>Registrerte søk: <strong>{total}</strong> · Uten treff: <strong>{missing}</strong></p>
   {busy&&<p role="status">Henter statistikk …</p>}{error&&<p role="alert">{error}</p>}
   {!busy&&!error&&(rows.length?<table style={{width:'100%',borderCollapse:'collapse',textAlign:'left'}}><caption style={{textAlign:'left',paddingBottom:12}}>Populære søkeord og søk uten treff</caption><thead><tr><th>Søkeord / gruppe</th><th>Antall søk</th><th>Uten treff</th></tr></thead><tbody>{rows.map(r=><tr key={r.term}><td style={{padding:'12px 0',borderBottom:'1px solid #8885'}}>{r.term}</td><td>{r.searches}</td><td>{r.no_results}</td></tr>)}</tbody></table>:<p>Ingen registrerte søk i perioden ennå.</p>)}
-  <p style={{lineHeight:1.7,marginTop:28}}>Bare innsendte søk telles. Kjente fagord lagres som faste søkeord; all annen fritekst samles under «Andre søk». Navn, IP-adresser, e-postadresser og den opprinnelige søketeksten lagres ikke i statistikkdatabasen. Daglige tellinger slettes etter 90 dager. Datoene følger norsk tid.</p>
+  <p style={{lineHeight:1.7,marginTop:28}}>Innsendte søkeord og fraser telles, også når de ikke gir treff. Åpenbart tilfeldige bokstaver, tall, e-postadresser og sannsynlige fulle navn filtreres bort. Filteret er ikke perfekt. Søkeord lagres uten IP-adresser eller besøksidentifikatorer. Eldre tellinger under «Andre søk» kan ikke gjenskapes som enkeltord. Daglige tellinger slettes etter 90 dager. Datoene følger norsk tid.</p>
   <p>Tallene viser søk, ikke unike personer. Roboter, gjentatte søk og personverninnstillinger kan påvirke tallene.</p>
  </div>
 }
